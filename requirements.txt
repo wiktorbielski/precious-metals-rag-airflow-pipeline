@@ -1,0 +1,5 @@
+apache-airflow
+kafka-python
+requests
+python-dotenv
+google-cloud-bigquery

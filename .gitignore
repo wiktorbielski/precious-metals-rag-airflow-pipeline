@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Secrets & env
+.env
+service-account.json
+
+# Airflow local logs & temp
+airflow/logs/
+
+# GCP key
+gcp-key.json
