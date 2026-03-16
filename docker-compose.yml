@@ -57,6 +57,19 @@ services:
     restart: unless-stopped
 
   # ──────────────────────────────────────────
+  # OLLAMA INIT (pulls models once then exits)
+  # ──────────────────────────────────────────
+  ollama-init:
+    image: ollama/ollama:latest
+    container_name: ollama-init
+    depends_on:
+      - ollama
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: bash -c "sleep 15 && ollama pull nomic-embed-text && ollama pull llama3.2:3b && echo '[ollama-init] All models ready'"
+    restart: no
+
+  # ──────────────────────────────────────────
   # POSTGRES (Airflow metadata DB)
   # ──────────────────────────────────────────
   postgres:
@@ -122,6 +135,10 @@ services:
       # ── GCP ───────────────────────────────
       GCP_PROJECT_ID: ${GCP_PROJECT_ID}
       GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp-key.json
+      GCP_SERVICE_ACCOUNT_KEY_PATH: /opt/airflow/gcp-key.json
+      # ── Ollama / RAG ──────────────────────
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2:3b}
+      OLLAMA_EMBEDDING_MODEL: ${OLLAMA_EMBEDDING_MODEL:-nomic-embed-text}
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -159,6 +176,10 @@ services:
       # ── GCP ───────────────────────────────
       GCP_PROJECT_ID: ${GCP_PROJECT_ID}
       GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp-key.json
+      GCP_SERVICE_ACCOUNT_KEY_PATH: /opt/airflow/gcp-key.json
+      # ── Ollama / RAG ──────────────────────
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2:3b}
+      OLLAMA_EMBEDDING_MODEL: ${OLLAMA_EMBEDDING_MODEL:-nomic-embed-text}
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs

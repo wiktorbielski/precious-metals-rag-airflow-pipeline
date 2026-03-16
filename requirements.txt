@@ -1,13 +1,9 @@
 kafka-python-ng==2.2.3          
 requests==2.32.3
 python-dotenv==1.0.1
-
-# BigQuery consumer
 google-cloud-bigquery==3.40.1
 pyarrow                         
 db-dtypes                       
-
-# RAG / AI analysis (Ollama + LangChain stack)
 langchain==1.2.12
 langchain-community==0.4.1
 langchain-ollama==1.0.1

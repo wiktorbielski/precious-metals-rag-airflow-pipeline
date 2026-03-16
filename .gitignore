@@ -15,4 +15,4 @@ airflow/logs/
 gcp-key.json
 
 # Logs
-logs/
+logs/*
