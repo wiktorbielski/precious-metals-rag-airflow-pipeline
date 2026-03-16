@@ -19,7 +19,7 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GCP_SERVICE_ACCOUNT_KEY_PATH
 
 # BigQuery client & target table
 client = bigquery.Client(project=GCP_PROJECT_ID)
-table_id = f"{GCP_PROJECT_ID}.commodity_dataset.raw_prices"  # ← change dataset name if you prefer
+table_id = f"{GCP_PROJECT_ID}.commodity_dataset.raw_prices"
 
 # Batching settings (same logic as before)
 BATCH_SIZE_THRESHOLD = 10
@@ -36,7 +36,7 @@ consumer = KafkaConsumer(
     value_deserializer=lambda m: json.loads(m.decode('utf-8')),
     auto_offset_reset='earliest',
     enable_auto_commit=True,
-    group_id='commodity-prices-processing-group'  # changed group id so it doesn't conflict with old weather runs
+    group_id='commodity-prices-processing-group'
 )
 
 def validate_record(record: dict) -> bool:
@@ -92,7 +92,7 @@ try:
             if not validate_record(record):
                 continue
 
-            # Add processing timestamp (UTC ISO format – same as your original)
+            # Add processing timestamp (UTC ISO format)
             record['processing_timestamp'] = datetime.now(timezone.utc).isoformat()
 
             data_batch.append(record)

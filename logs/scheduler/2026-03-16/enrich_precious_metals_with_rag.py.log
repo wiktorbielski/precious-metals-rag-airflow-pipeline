@@ -1,0 +1,120 @@
+[2026-03-16T06:44:52.839+0000] {processor.py:161} INFO - Started process (PID=162) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:44:52.841+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-16T06:44:52.845+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:44:52.845+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:44:54.035+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:44:54.029+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/enrich_precious_metals_with_rag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/enrich_precious_metals_with_rag.py", line 22, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator  # ← correct import for Airflow ≥ 2.7 / 2.9+
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:44:54.036+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:44:54.055+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.232 seconds
+[2026-03-16T06:45:24.136+0000] {processor.py:161} INFO - Started process (PID=178) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:45:24.138+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-16T06:45:24.140+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:45:24.140+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:45:24.423+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:45:24.419+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/enrich_precious_metals_with_rag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/enrich_precious_metals_with_rag.py", line 22, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator  # ← correct import for Airflow ≥ 2.7 / 2.9+
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:45:24.424+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:45:24.444+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 0.313 seconds
+[2026-03-16T06:45:55.404+0000] {processor.py:161} INFO - Started process (PID=189) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:45:55.405+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-16T06:45:55.406+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:45:55.405+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:45:55.637+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:45:55.632+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/enrich_precious_metals_with_rag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/enrich_precious_metals_with_rag.py", line 22, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator  # ← correct import for Airflow ≥ 2.7 / 2.9+
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:45:55.639+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:45:55.656+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 0.257 seconds
+[2026-03-16T06:46:25.732+0000] {processor.py:161} INFO - Started process (PID=200) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:46:25.733+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-16T06:46:25.735+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:46:25.734+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:46:26.022+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:46:26.016+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/enrich_precious_metals_with_rag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/enrich_precious_metals_with_rag.py", line 22, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator  # ← correct import for Airflow ≥ 2.7 / 2.9+
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:46:26.025+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:46:26.049+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 0.323 seconds
+[2026-03-16T06:46:56.921+0000] {processor.py:161} INFO - Started process (PID=211) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:46:56.922+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-16T06:46:56.923+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:46:56.922+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:46:57.175+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:46:57.170+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/enrich_precious_metals_with_rag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/enrich_precious_metals_with_rag.py", line 22, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator  # ← correct import for Airflow ≥ 2.7 / 2.9+
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:46:57.176+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:46:57.194+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 0.281 seconds
+[2026-03-16T06:47:28.141+0000] {processor.py:161} INFO - Started process (PID=222) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:47:28.142+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-16T06:47:28.143+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:47:28.143+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:47:28.408+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:47:28.403+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/enrich_precious_metals_with_rag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/enrich_precious_metals_with_rag.py", line 22, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator  # ← correct import for Airflow ≥ 2.7 / 2.9+
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:47:28.410+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:47:28.430+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 0.294 seconds
+[2026-03-16T06:47:59.398+0000] {processor.py:161} INFO - Started process (PID=233) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:47:59.400+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-16T06:47:59.401+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:47:59.400+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:47:59.724+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:47:59.719+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/enrich_precious_metals_with_rag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/enrich_precious_metals_with_rag.py", line 22, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator  # ← correct import for Airflow ≥ 2.7 / 2.9+
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:47:59.725+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:47:59.745+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 0.353 seconds
+[2026-03-16T06:48:30.623+0000] {processor.py:161} INFO - Started process (PID=244) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:48:30.624+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-16T06:48:30.625+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:48:30.624+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:48:30.887+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:48:30.883+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/enrich_precious_metals_with_rag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/enrich_precious_metals_with_rag.py", line 22, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator  # ← correct import for Airflow ≥ 2.7 / 2.9+
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:48:30.889+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-16T06:48:30.908+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 0.291 seconds

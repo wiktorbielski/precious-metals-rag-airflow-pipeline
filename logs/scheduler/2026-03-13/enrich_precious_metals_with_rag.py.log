@@ -1,0 +1,116 @@
+[2026-03-13T13:50:07.572+0000] {processor.py:161} INFO - Started process (PID=162) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:50:07.573+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:50:07.575+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:07.575+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:50:09.866+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:50:09.965+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:09.964+0000] {override.py:1858} INFO - Created Permission View: can edit on DAG:enrich_precious_metals_with_rag
+[2026-03-13T13:50:09.974+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:09.974+0000] {override.py:1858} INFO - Created Permission View: can delete on DAG:enrich_precious_metals_with_rag
+[2026-03-13T13:50:09.981+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:09.981+0000] {override.py:1858} INFO - Created Permission View: can read on DAG:enrich_precious_metals_with_rag
+[2026-03-13T13:50:09.982+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:09.982+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:50:09.992+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:09.992+0000] {dag.py:3111} INFO - Creating ORM DAG for enrich_precious_metals_with_rag
+[2026-03-13T13:50:10.003+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:10.003+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:50:10.026+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 2.461 seconds
+[2026-03-13T13:50:40.089+0000] {processor.py:161} INFO - Started process (PID=178) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:50:40.090+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:50:40.092+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:40.092+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:50:41.014+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:50:41.036+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:41.035+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:50:41.052+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:41.052+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:50:41.069+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 0.985 seconds
+[2026-03-13T13:51:11.277+0000] {processor.py:161} INFO - Started process (PID=189) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:51:11.278+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:51:11.280+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:11.279+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:51:12.305+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:51:12.335+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:12.334+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:51:12.360+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:12.360+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:51:12.380+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.109 seconds
+[2026-03-13T13:51:42.569+0000] {processor.py:161} INFO - Started process (PID=200) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:51:42.571+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:51:42.572+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:42.572+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:51:43.617+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:51:43.655+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:43.652+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:51:43.687+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:43.687+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:51:43.723+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.159 seconds
+[2026-03-13T13:52:13.933+0000] {processor.py:161} INFO - Started process (PID=211) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:52:13.934+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:52:13.935+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:13.935+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:52:14.881+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:52:14.904+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:14.904+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:52:14.922+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:14.922+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:52:14.939+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.012 seconds
+[2026-03-13T13:52:45.129+0000] {processor.py:161} INFO - Started process (PID=222) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:52:45.130+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:52:45.132+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:45.132+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:52:46.403+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:52:46.429+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:46.428+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:52:46.451+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:46.451+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:52:46.470+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.346 seconds
+[2026-03-13T13:53:16.657+0000] {processor.py:161} INFO - Started process (PID=233) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:53:16.658+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:53:16.660+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:16.660+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:53:17.705+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:53:17.730+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:17.729+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:53:17.751+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:17.751+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:53:17.771+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.120 seconds
+[2026-03-13T13:53:47.973+0000] {processor.py:161} INFO - Started process (PID=244) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:53:47.974+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:53:47.977+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:47.976+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:53:49.069+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:53:49.095+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:49.094+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:53:49.115+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:49.114+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:53:49.134+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.167 seconds
+[2026-03-13T13:53:53.190+0000] {processor.py:161} INFO - Started process (PID=250) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:53:53.191+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:53:53.193+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:53.193+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:53:54.318+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:53:54.341+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:54.341+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:53:54.360+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:54.360+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:53:54.383+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.199 seconds
+[2026-03-13T13:54:24.604+0000] {processor.py:161} INFO - Started process (PID=261) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:54:24.605+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:54:24.607+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:24.606+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:54:25.544+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:54:25.566+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:25.566+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:54:25.584+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:25.584+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:54:25.601+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.002 seconds
+[2026-03-13T13:54:55.803+0000] {processor.py:161} INFO - Started process (PID=272) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:54:55.804+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:54:55.806+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:55.806+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:54:56.747+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:54:56.768+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:56.768+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:54:56.786+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:56.786+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:54:56.803+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.007 seconds
+[2026-03-13T13:55:27.420+0000] {processor.py:161} INFO - Started process (PID=288) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:55:27.421+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:55:27.423+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:27.422+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:55:28.390+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:55:28.414+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:28.413+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:55:28.432+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:28.432+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:55:28.448+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.034 seconds
+[2026-03-13T13:55:58.624+0000] {processor.py:161} INFO - Started process (PID=299) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:55:58.625+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:55:58.626+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:58.626+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:55:59.569+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:55:59.592+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:59.591+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:55:59.609+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:59.608+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:55:59.625+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.007 seconds
+[2026-03-13T13:56:29.823+0000] {processor.py:161} INFO - Started process (PID=310) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:56:29.824+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:56:29.826+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:56:29.826+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:56:30.868+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:56:30.891+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:56:30.890+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:56:30.908+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:56:30.907+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:56:30.927+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.110 seconds
+[2026-03-13T13:57:01.124+0000] {processor.py:161} INFO - Started process (PID=321) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:57:01.125+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:57:01.127+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:57:01.126+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:57:02.070+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:57:02.093+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:57:02.093+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:57:02.112+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:57:02.111+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:57:02.129+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.011 seconds
+[2026-03-13T13:57:26.298+0000] {processor.py:161} INFO - Started process (PID=332) to work on /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:57:26.299+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/enrich_precious_metals_with_rag.py for tasks to queue
+[2026-03-13T13:57:26.301+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:57:26.301+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:57:27.438+0000] {processor.py:840} INFO - DAG(s) 'enrich_precious_metals_with_rag' retrieved from /opt/airflow/dags/enrich_precious_metals_with_rag.py
+[2026-03-13T13:57:27.471+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:57:27.470+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:57:27.498+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:57:27.497+0000] {dag.py:3947} INFO - Setting next_dagrun for enrich_precious_metals_with_rag to 2026-03-13 13:00:00+00:00, run_after=2026-03-13 13:30:00+00:00
+[2026-03-13T13:57:27.520+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/enrich_precious_metals_with_rag.py took 1.227 seconds

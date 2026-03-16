@@ -1,0 +1,219 @@
+[2026-03-13T13:50:07.469+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2026-03-13T13:50:07.474+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2026-03-13T13:50:07.475+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-03-13T13:50:07.476+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-13T13:50:07.501+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-03-13T13:50:07.600+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py    162  0.05s             0           0
+/opt/airflow/dags/fetch_precious_metals.py              165  0.04s             0           0
+================================================================================
+[2026-03-13T13:50:37.753+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  2.49s           2026-03-13T13:50:10
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.70s           2026-03-13T13:50:08
+================================================================================
+[2026-03-13T13:51:08.224+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.01s           2026-03-13T13:50:41
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.29s           2026-03-13T13:50:39
+================================================================================
+[2026-03-13T13:51:38.405+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.14s           2026-03-13T13:51:12
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.25s           2026-03-13T13:51:09
+================================================================================
+[2026-03-13T13:52:08.708+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.20s           2026-03-13T13:51:43
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.23s           2026-03-13T13:51:39
+================================================================================
+[2026-03-13T13:52:39.056+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.04s           2026-03-13T13:52:14
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.25s           2026-03-13T13:52:10
+================================================================================
+[2026-03-13T13:53:09.513+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.38s           2026-03-13T13:52:46
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.29s           2026-03-13T13:52:41
+================================================================================
+[2026-03-13T13:53:39.750+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.15s           2026-03-13T13:53:17
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.23s           2026-03-13T13:53:11
+================================================================================
+[2026-03-13T13:54:10.494+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.23s           2026-03-13T13:53:54
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.25s           2026-03-13T13:53:55
+================================================================================
+[2026-03-13T13:54:40.696+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.03s           2026-03-13T13:54:25
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.23s           2026-03-13T13:54:25
+================================================================================
+[2026-03-13T13:55:07.871+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-13T13:55:07.889+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-03-13T13:55:10.917+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.03s           2026-03-13T13:54:56
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.23s           2026-03-13T13:54:56
+================================================================================
+[2026-03-13T13:55:41.481+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.06s           2026-03-13T13:55:28
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.22s           2026-03-13T13:55:26
+================================================================================
+[2026-03-13T13:56:11.683+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.03s           2026-03-13T13:55:59
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.21s           2026-03-13T13:55:57
+================================================================================
+[2026-03-13T13:56:41.862+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.14s           2026-03-13T13:56:30
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.24s           2026-03-13T13:56:17
+================================================================================
+[2026-03-13T13:57:12.173+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           1           0  1.04s           2026-03-13T13:57:02
+/opt/airflow/dags/fetch_precious_metals.py                                     1           0  0.23s           2026-03-13T13:56:48
+================================================================================
+[2026-03-16T06:44:52.729+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2026-03-16T06:44:52.731+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2026-03-16T06:44:52.731+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-03-16T06:44:52.732+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-16T06:44:52.758+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-03-16T06:44:52.867+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py    162  0.06s             0           0
+/opt/airflow/dags/fetch_precious_metals.py              165  0.05s             0           0
+================================================================================
+[2026-03-16T06:45:23.105+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           0           1  1.26s           2026-03-16T06:44:54
+/opt/airflow/dags/fetch_precious_metals.py              173  0.00s             0           1  0.09s           2026-03-16T06:44:52
+================================================================================
+[2026-03-16T06:45:53.369+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           0           1  0.34s           2026-03-16T06:45:24
+/opt/airflow/dags/fetch_precious_metals.py              184  0.00s             0           1  0.07s           2026-03-16T06:45:23
+================================================================================
+[2026-03-16T06:46:23.593+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           0           1  0.28s           2026-03-16T06:45:55
+/opt/airflow/dags/fetch_precious_metals.py              195  0.00s             0           1  0.05s           2026-03-16T06:45:53
+================================================================================
+[2026-03-16T06:46:53.877+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           0           1  0.35s           2026-03-16T06:46:26
+/opt/airflow/dags/fetch_precious_metals.py              206  0.00s             0           1  0.10s           2026-03-16T06:46:23
+================================================================================
+[2026-03-16T06:47:24.100+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           0           1  0.30s           2026-03-16T06:46:57
+/opt/airflow/dags/fetch_precious_metals.py              217  0.00s             0           1  0.06s           2026-03-16T06:46:53
+================================================================================
+[2026-03-16T06:47:54.333+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           0           1  0.32s           2026-03-16T06:47:28
+/opt/airflow/dags/fetch_precious_metals.py              228  0.00s             0           1  0.06s           2026-03-16T06:47:24
+================================================================================
+[2026-03-16T06:48:24.566+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/enrich_precious_metals_with_rag.py                           0           1  0.38s           2026-03-16T06:47:59
+/opt/airflow/dags/fetch_precious_metals.py              239  0.00s             0           1  0.06s           2026-03-16T06:47:54
+================================================================================

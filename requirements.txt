@@ -1,5 +1,17 @@
-apache-airflow
-kafka-python
-requests
-python-dotenv
-google-cloud-bigquery
+# Core pipeline
+apache-airflow==3.1.8
+kafka-python==2.0.2
+requests==2.32.3
+
+# Environment & configuration
+python-dotenv==1.0.1
+
+# BigQuery consumer
+google-cloud-bigquery==3.25.0
+
+# RAG / AI analysis (Ollama + LangChain stack)
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-ollama==0.1.3
+faiss-cpu>=1.13.0
+pandas==2.2.2

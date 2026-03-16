@@ -1,0 +1,116 @@
+[2026-03-13T13:50:07.580+0000] {processor.py:161} INFO - Started process (PID=165) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:50:07.581+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:50:07.583+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:07.583+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:50:07.936+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:50:08.190+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:08.189+0000] {override.py:1858} INFO - Created Permission View: can edit on DAG:fetch_precious_metals_prices
+[2026-03-13T13:50:08.200+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:08.200+0000] {override.py:1858} INFO - Created Permission View: can delete on DAG:fetch_precious_metals_prices
+[2026-03-13T13:50:08.207+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:08.206+0000] {override.py:1858} INFO - Created Permission View: can read on DAG:fetch_precious_metals_prices
+[2026-03-13T13:50:08.207+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:08.207+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:50:08.218+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:08.217+0000] {dag.py:3111} INFO - Creating ORM DAG for fetch_precious_metals_prices
+[2026-03-13T13:50:08.230+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:08.230+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:49:00+00:00, run_after=2026-03-13 13:50:00+00:00
+[2026-03-13T13:50:08.253+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.678 seconds
+[2026-03-13T13:50:38.786+0000] {processor.py:161} INFO - Started process (PID=173) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:50:38.788+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:50:38.795+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:38.794+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:50:38.968+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:50:39.002+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:39.001+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:50:39.025+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:50:39.025+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:49:00+00:00, run_after=2026-03-13 13:50:00+00:00
+[2026-03-13T13:50:39.048+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.270 seconds
+[2026-03-13T13:51:09.253+0000] {processor.py:161} INFO - Started process (PID=184) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:51:09.253+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:51:09.255+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:09.255+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:51:09.381+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:51:09.413+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:09.412+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:51:09.447+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:09.446+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:50:00+00:00, run_after=2026-03-13 13:51:00+00:00
+[2026-03-13T13:51:09.474+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.227 seconds
+[2026-03-13T13:51:39.544+0000] {processor.py:161} INFO - Started process (PID=195) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:51:39.545+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:51:39.547+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:39.547+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:51:39.669+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:51:39.701+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:39.701+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:51:39.725+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:51:39.725+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:50:00+00:00, run_after=2026-03-13 13:51:00+00:00
+[2026-03-13T13:51:39.745+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.207 seconds
+[2026-03-13T13:52:09.910+0000] {processor.py:161} INFO - Started process (PID=206) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:52:09.912+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:52:09.915+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:09.914+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:52:10.055+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:52:10.086+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:10.086+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:52:10.111+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:10.111+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:51:00+00:00, run_after=2026-03-13 13:52:00+00:00
+[2026-03-13T13:52:10.132+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.229 seconds
+[2026-03-13T13:52:41.101+0000] {processor.py:161} INFO - Started process (PID=217) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:52:41.102+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:52:41.106+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:41.105+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:52:41.272+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:52:41.303+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:41.302+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:52:41.328+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:52:41.327+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:51:00+00:00, run_after=2026-03-13 13:52:00+00:00
+[2026-03-13T13:52:41.350+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.258 seconds
+[2026-03-13T13:53:11.549+0000] {processor.py:161} INFO - Started process (PID=228) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:53:11.550+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:53:11.553+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:11.552+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:53:11.679+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:53:11.709+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:11.708+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:53:11.733+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:11.733+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:52:00+00:00, run_after=2026-03-13 13:53:00+00:00
+[2026-03-13T13:53:11.753+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.209 seconds
+[2026-03-13T13:53:40.796+0000] {processor.py:161} INFO - Started process (PID=239) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:53:40.798+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:53:40.801+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:40.801+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:53:40.988+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:53:41.028+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:41.028+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:53:41.060+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:41.059+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:52:00+00:00, run_after=2026-03-13 13:53:00+00:00
+[2026-03-13T13:53:41.088+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.303 seconds
+[2026-03-13T13:53:55.221+0000] {processor.py:161} INFO - Started process (PID=256) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:53:55.223+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:53:55.225+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:55.224+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:53:55.367+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:53:55.396+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:55.396+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:53:55.419+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:53:55.418+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:52:00+00:00, run_after=2026-03-13 13:53:00+00:00
+[2026-03-13T13:53:55.442+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.226 seconds
+[2026-03-13T13:54:25.624+0000] {processor.py:161} INFO - Started process (PID=267) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:54:25.625+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:54:25.627+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:25.627+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:54:25.750+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:54:25.777+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:25.776+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:54:25.799+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:25.798+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:53:00+00:00, run_after=2026-03-13 13:54:00+00:00
+[2026-03-13T13:54:25.821+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.202 seconds
+[2026-03-13T13:54:56.016+0000] {processor.py:161} INFO - Started process (PID=276) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:54:56.017+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:54:56.019+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:56.019+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:54:56.150+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:54:56.180+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:56.179+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:54:56.203+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:54:56.203+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:53:00+00:00, run_after=2026-03-13 13:54:00+00:00
+[2026-03-13T13:54:56.223+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.212 seconds
+[2026-03-13T13:55:26.407+0000] {processor.py:161} INFO - Started process (PID=283) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:55:26.408+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:55:26.410+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:26.409+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:55:26.526+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:55:26.553+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:26.553+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:55:26.576+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:26.576+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:54:00+00:00, run_after=2026-03-13 13:55:00+00:00
+[2026-03-13T13:55:26.594+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.193 seconds
+[2026-03-13T13:55:57.604+0000] {processor.py:161} INFO - Started process (PID=294) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:55:57.604+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:55:57.606+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:57.606+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:55:57.721+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:55:57.748+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:57.748+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:55:57.767+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:55:57.767+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:54:00+00:00, run_after=2026-03-13 13:55:00+00:00
+[2026-03-13T13:55:57.785+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.187 seconds
+[2026-03-13T13:56:17.743+0000] {processor.py:161} INFO - Started process (PID=305) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:56:17.744+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:56:17.746+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:56:17.746+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:56:17.880+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:56:17.908+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:56:17.907+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:56:17.929+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:56:17.929+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:55:00+00:00, run_after=2026-03-13 13:56:00+00:00
+[2026-03-13T13:56:17.952+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.214 seconds
+[2026-03-13T13:56:48.041+0000] {processor.py:161} INFO - Started process (PID=316) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:56:48.042+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:56:48.044+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:56:48.044+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:56:48.168+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:56:48.199+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:56:48.199+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:56:48.225+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:56:48.224+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:55:00+00:00, run_after=2026-03-13 13:56:00+00:00
+[2026-03-13T13:56:48.247+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.212 seconds
+[2026-03-13T13:57:19.238+0000] {processor.py:161} INFO - Started process (PID=327) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:57:19.239+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-13T13:57:19.241+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:57:19.240+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:57:19.360+0000] {processor.py:840} INFO - DAG(s) 'fetch_precious_metals_prices' retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-13T13:57:19.391+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:57:19.391+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-13T13:57:19.416+0000] {logging_mixin.py:188} INFO - [2026-03-13T13:57:19.416+0000] {dag.py:3947} INFO - Setting next_dagrun for fetch_precious_metals_prices to 2026-03-13 13:56:00+00:00, run_after=2026-03-13 13:57:00+00:00
+[2026-03-13T13:57:19.435+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.203 seconds

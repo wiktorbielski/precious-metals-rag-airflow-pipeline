@@ -1,0 +1,112 @@
+[2026-03-16T06:44:52.851+0000] {processor.py:161} INFO - Started process (PID=165) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:44:52.857+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-16T06:44:52.861+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:44:52.861+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:44:52.880+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:44:52.877+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/fetch_precious_metals.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_precious_metals.py", line 6, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:44:52.881+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:44:52.903+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.065 seconds
+[2026-03-16T06:45:23.123+0000] {processor.py:161} INFO - Started process (PID=173) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:45:23.124+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-16T06:45:23.126+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:45:23.126+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:45:23.140+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:45:23.137+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/fetch_precious_metals.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_precious_metals.py", line 6, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:45:23.141+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:45:23.166+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.051 seconds
+[2026-03-16T06:45:53.383+0000] {processor.py:161} INFO - Started process (PID=184) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:45:53.384+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-16T06:45:53.384+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:45:53.384+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:45:53.395+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:45:53.392+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/fetch_precious_metals.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_precious_metals.py", line 6, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:45:53.396+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:45:53.413+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.035 seconds
+[2026-03-16T06:46:23.618+0000] {processor.py:161} INFO - Started process (PID=195) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:46:23.622+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-16T06:46:23.624+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:46:23.623+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:46:23.649+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:46:23.642+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/fetch_precious_metals.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_precious_metals.py", line 6, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:46:23.651+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:46:23.680+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.070 seconds
+[2026-03-16T06:46:53.890+0000] {processor.py:161} INFO - Started process (PID=206) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:46:53.891+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-16T06:46:53.892+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:46:53.892+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:46:53.903+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:46:53.900+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/fetch_precious_metals.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_precious_metals.py", line 6, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:46:53.904+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:46:53.926+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.042 seconds
+[2026-03-16T06:47:24.113+0000] {processor.py:161} INFO - Started process (PID=217) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:47:24.113+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-16T06:47:24.114+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:47:24.114+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:47:24.126+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:47:24.123+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/fetch_precious_metals.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_precious_metals.py", line 6, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:47:24.127+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:47:24.146+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.038 seconds
+[2026-03-16T06:47:54.346+0000] {processor.py:161} INFO - Started process (PID=228) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:47:54.346+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-16T06:47:54.347+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:47:54.347+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:47:54.358+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:47:54.355+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/fetch_precious_metals.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_precious_metals.py", line 6, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:47:54.359+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:47:54.379+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.039 seconds
+[2026-03-16T06:48:24.580+0000] {processor.py:161} INFO - Started process (PID=239) to work on /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:48:24.581+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/fetch_precious_metals.py for tasks to queue
+[2026-03-16T06:48:24.581+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:48:24.581+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:48:24.596+0000] {logging_mixin.py:188} INFO - [2026-03-16T06:48:24.592+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/fetch_precious_metals.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_precious_metals.py", line 6, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-03-16T06:48:24.597+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_precious_metals.py
+[2026-03-16T06:48:24.626+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/fetch_precious_metals.py took 0.051 seconds
