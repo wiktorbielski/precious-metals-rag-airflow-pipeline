@@ -1,5 +1,6 @@
 import json
 import os
+import socket
 from datetime import datetime, timezone
 from kafka import KafkaConsumer
 from google.cloud import bigquery
@@ -7,117 +8,144 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# ── Configuration & GCP Auth ────────────────────────────────────────────────
-BOOTSTRAP_SERVERS = os.getenv('KAFKA_BOOTSTRAP_SERVERS', 'localhost:9092')
-TOPIC = os.getenv('KAFKA_TOPIC', 'commodity_prices')
+# ── Environment auto-detection ───────────────────────────────────────────────
+# Inside Docker the hostname resolves; on Windows it won't → fall back to localhost
+def _resolve_bootstrap_servers() -> str:
+    env_val = os.getenv('KAFKA_BOOTSTRAP_SERVERS', '')
+    if env_val:
+        host = env_val.split(':')[0]
+        try:
+            socket.getaddrinfo(host, None)
+            return env_val
+        except socket.gaierror:
+            print(f"[WARN] '{env_val}' not resolvable – falling back to localhost:9092")
+            return 'localhost:9092'
+    return 'localhost:9092'
 
-GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID')
-GCP_SERVICE_ACCOUNT_KEY_PATH = os.getenv('GCP_SERVICE_ACCOUNT_KEY_PATH')
+# ── Configuration ────────────────────────────────────────────────────────────
+BOOTSTRAP_SERVERS = _resolve_bootstrap_servers()
+TOPIC             = os.getenv('KAFKA_TOPIC', 'commodity_prices')
+GCP_PROJECT_ID    = os.getenv('GCP_PROJECT_ID')
+KEY_PATH          = os.getenv('GCP_SERVICE_ACCOUNT_KEY_PATH')
+BATCH_SIZE        = int(os.getenv('CONSUMER_BATCH_SIZE', '10'))
+GROUP_ID          = os.getenv('KAFKA_CONSUMER_GROUP', 'commodity-prices-processing-group')
 
-# Set GCP credentials globally (same as your weather project)
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GCP_SERVICE_ACCOUNT_KEY_PATH
+REQUIRED_FIELDS = ['metal', 'price_usd', 'api_timestamp', 'ingestion_timestamp']
 
-# BigQuery client & target table
-client = bigquery.Client(project=GCP_PROJECT_ID)
-table_id = f"{GCP_PROJECT_ID}.commodity_dataset.raw_prices"
+# ── GCP Auth ─────────────────────────────────────────────────────────────────
+if KEY_PATH:
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = KEY_PATH
+else:
+    print("[WARN] GCP_SERVICE_ACCOUNT_KEY_PATH not set – relying on ADC/gcloud login")
 
-# Batching settings (same logic as before)
-BATCH_SIZE_THRESHOLD = 10
+# ── BigQuery client ───────────────────────────────────────────────────────────
+if not GCP_PROJECT_ID:
+    raise EnvironmentError("GCP_PROJECT_ID is required but not set in .env")
 
-# Required/expected fields in each Kafka message
-REQUIRED_FIELDS = [
-    'metal', 'price_usd', 'api_timestamp', 'ingestion_timestamp'
-]
+bq_client = bigquery.Client(project=GCP_PROJECT_ID)
+TABLE_ID  = f"{GCP_PROJECT_ID}.commodity_dataset.raw_prices"
 
-# Kafka Consumer Setup (same reliable config as your weather consumer)
+# ── Kafka consumer ────────────────────────────────────────────────────────────
+print(f"[INIT] Connecting to Kafka at {BOOTSTRAP_SERVERS}")
+
 consumer = KafkaConsumer(
     TOPIC,
     bootstrap_servers=BOOTSTRAP_SERVERS,
     value_deserializer=lambda m: json.loads(m.decode('utf-8')),
     auto_offset_reset='earliest',
     enable_auto_commit=True,
-    group_id='commodity-prices-processing-group'
+    group_id=GROUP_ID,
+    consumer_timeout_ms=-1,     # block forever – never time out
+    request_timeout_ms=30000,
+    session_timeout_ms=10000,
 )
 
+# ── Helpers ───────────────────────────────────────────────────────────────────
 def validate_record(record: dict) -> bool:
     """
-    Basic validation + schema handling.
-    Skip if critical field (price) is missing; fill optional ones with None.
+    Returns False and skips records missing price_usd (critical).
+    Fills any other missing required fields with None and continues.
     """
-    # Critical: no price → useless record
     if record.get('price_usd') is None:
         print(f"[SKIP] Missing price_usd for metal: {record.get('metal', 'UNKNOWN')}")
         return False
 
-    # Warn and fill missing non-critical fields
     missing = [f for f in REQUIRED_FIELDS if f not in record]
     if missing:
-        print(f"[WARN] Metal {record.get('metal', 'UNKNOWN')} missing fields: {missing}. Filling with None.")
+        print(f"[WARN] {record.get('metal', 'UNKNOWN')} missing optional fields {missing} – filling None")
         for field in missing:
             record[field] = None
 
     return True
 
+
 def upload_batch(batch: list) -> bool:
-    """Insert batch to BigQuery – same streaming insert logic as before."""
+    """Stream-insert a batch into BigQuery. Returns True on success."""
     if not batch:
         return True
 
-    print(f"[UPLOAD] Sending {len(batch)} records to {table_id}...")
+    print(f"[UPLOAD] Inserting {len(batch)} records → {TABLE_ID}")
     try:
-        errors = client.insert_rows_json(table_id, batch)
+        errors = bq_client.insert_rows_json(TABLE_ID, batch)
         if not errors:
-            print(f"[OK] Batch of {len(batch)} records successfully loaded")
+            print(f"[OK] {len(batch)} records committed to BigQuery")
             return True
 
-        print(f"[ERROR] BigQuery insert errors: {errors}")
+        print(f"[ERROR] BigQuery reported insert errors: {errors}")
         return False
 
-    except Exception as e:
-        print(f"[ERROR] BigQuery client exception: {type(e).__name__}: {e}")
+    except Exception as exc:
+        print(f"[ERROR] BigQuery exception: {type(exc).__name__}: {exc}")
         return False
 
-# ── Main Consumer Loop ──────────────────────────────────────────────────────
-print(f"[START] Commodity prices consumer listening on topic: '{TOPIC}'")
-print(f"Target BigQuery table: {table_id}")
-print(f"Batch size threshold: {BATCH_SIZE_THRESHOLD}\n")
 
-data_batch = []
+def flush(batch: list, label: str = "batch") -> list:
+    """Upload batch and return empty list on success, same list on failure."""
+    if upload_batch(batch):
+        return []
+    print(f"[RETRY] Keeping {len(batch)} records in buffer for next attempt")
+    return batch
+
+
+# ── Main loop ─────────────────────────────────────────────────────────────────
+print(f"[START] Listening on topic '{TOPIC}'")
+print(f"        Target table  : {TABLE_ID}")
+print(f"        Batch size    : {BATCH_SIZE}")
+print(f"        Consumer group: {GROUP_ID}\n")
+
+data_batch: list = []
 
 try:
     for message in consumer:
         try:
-            record = message.value
+            record: dict = message.value
 
             if not validate_record(record):
                 continue
 
-            # Add processing timestamp (UTC ISO format)
             record['processing_timestamp'] = datetime.now(timezone.utc).isoformat()
-
             data_batch.append(record)
 
-            print(f"[RECEIVED] {record.get('metal')} | ${record.get('price_usd'):.2f} | "
-                  f"Buffer: {len(data_batch)}/{BATCH_SIZE_THRESHOLD}")
+            print(
+                f"[MSG] {record.get('metal'):>3} | "
+                f"${record.get('price_usd'):>10.2f} | "
+                f"buffer {len(data_batch)}/{BATCH_SIZE}"
+            )
 
-            if len(data_batch) >= BATCH_SIZE_THRESHOLD:
-                if upload_batch(data_batch):
-                    data_batch = []  # clear only on success
-                else:
-                    print(f"[RETRY] Keeping {len(data_batch)} records in buffer for next attempt")
+            if len(data_batch) >= BATCH_SIZE:
+                data_batch = flush(data_batch)
 
-        except Exception as e:
-            print(f"[ERROR] Message processing failed: {type(e).__name__}: {e}")
+        except Exception as exc:
+            print(f"[ERROR] Failed to process message: {type(exc).__name__}: {exc}")
             continue
 
 except KeyboardInterrupt:
-    print("\n[STOP] Received Ctrl+C – shutting down gracefully...")
+    print("\n[STOP] Ctrl+C received – shutting down gracefully…")
 
 finally:
-    # Final flush of any remaining records (even partial batch)
     if data_batch:
-        print(f"[FINAL FLUSH] Saving {len(data_batch)} remaining records...")
-        upload_batch(data_batch)
+        print(f"[FLUSH] Flushing {len(data_batch)} remaining records before exit…")
+        flush(data_batch)
 
     consumer.close()
     print("[STOP] Consumer closed cleanly.")

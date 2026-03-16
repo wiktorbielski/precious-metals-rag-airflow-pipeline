@@ -1,6 +1,8 @@
-version: "3.8"
-
 services:
+
+  # ──────────────────────────────────────────
+  # KAFKA (KRaft mode, no Zookeeper)
+  # ──────────────────────────────────────────
   kafka:
     image: apache/kafka:3.8.0
     container_name: kafka-broker
@@ -17,12 +19,18 @@ services:
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
       KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9091
       KAFKA_INTER_BROKER_LISTENER_NAME: DOCKER
+      KAFKA_LOG4J_ROOT_LOGLEVEL: WARN
+      KAFKA_TOOLS_LOG4J_LOGLEVEL: WARN
     healthcheck:
       test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list"]
       interval: 10s
       timeout: 5s
-      retries: 5
+      retries: 10
+      start_period: 30s
 
+  # ──────────────────────────────────────────
+  # KAFKA UI
+  # ──────────────────────────────────────────
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
     container_name: kafka-ui
@@ -34,7 +42,11 @@ services:
     depends_on:
       kafka:
         condition: service_healthy
+    restart: unless-stopped
 
+  # ──────────────────────────────────────────
+  # OLLAMA
+  # ──────────────────────────────────────────
   ollama:
     image: ollama/ollama:latest
     container_name: ollama
@@ -44,101 +56,114 @@ services:
       - ollama:/root/.ollama
     restart: unless-stopped
 
+  # ──────────────────────────────────────────
+  # POSTGRES (Airflow metadata DB)
+  # ──────────────────────────────────────────
   postgres:
     image: postgres:15
+    container_name: postgres
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+    restart: unless-stopped
 
+  # ──────────────────────────────────────────
+  # AIRFLOW INIT (runs once then exits)
+  # ──────────────────────────────────────────
   airflow-init:
-    image: apache/airflow:2.9.3
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: airflow-init
     depends_on:
-      - postgres
-    env_file:
-      - .env
+      postgres:
+        condition: service_healthy
     environment:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      _PIP_ADDITIONAL_REQUIREMENTS: >
-        langchain
-        langchain-community
-        langchain-ollama
-        faiss-cpu
-        google-cloud-bigquery
-        pandas
-        python-dotenv
-        kafka-python-ng
-    command: >
-      bash -c "pip install --no-cache-dir ${_PIP_ADDITIONAL_REQUIREMENTS} &&
-               airflow db init &&
-               airflow users create \
-                 --username admin \
-                 --firstname Admin \
-                 --lastname User \
-                 --role Admin \
-                 --email admin@example.com \
-                 --password admin"
+      AIRFLOW__CORE__FERNET_KEY: ''
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    command: bash -c "export PATH=/home/airflow/.local/bin:$$PATH && airflow db migrate && airflow users create --username admin --firstname Admin --lastname User --role Admin --email admin@example.com --password admin"
 
+  # ──────────────────────────────────────────
+  # AIRFLOW WEBSERVER
+  # ──────────────────────────────────────────
   airflow-webserver:
-    image: apache/airflow:2.9.3
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: airflow-webserver
     restart: always
     depends_on:
-      - postgres
-      - ollama
-    env_file:
-      - .env
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
     environment:
       AIRFLOW__CORE__EXECUTOR: SequentialExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      _PIP_ADDITIONAL_REQUIREMENTS: >
-        langchain
-        langchain-community
-        langchain-ollama
-        faiss-cpu
-        google-cloud-bigquery
-        pandas
-        python-dotenv
-        kafka-python-ng
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      # ── Kafka ─────────────────────────────
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9093
+      KAFKA_TOPIC: ${KAFKA_TOPIC}
+      # ── MetalpriceAPI ─────────────────────
+      METALPRICE_API_KEY: ${METALPRICE_API_KEY}
+      METALS: ${METALS}
+      # ── GCP ───────────────────────────────
+      GCP_PROJECT_ID: ${GCP_PROJECT_ID}
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp-key.json
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./gcp-key.json:/opt/airflow/gcp-key.json:ro
     ports:
       - "8081:8080"
-    command: webserver
-    healthcheck:
-      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
+    command: bash -c "export PATH=/home/airflow/.local/bin:$$PATH && airflow webserver"
 
+  # ──────────────────────────────────────────
+  # AIRFLOW SCHEDULER
+  # ──────────────────────────────────────────
   airflow-scheduler:
-    image: apache/airflow:2.9.3
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: airflow-scheduler
     restart: always
     depends_on:
-      - postgres
-      - ollama
-    env_file:
-      - .env
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
     environment:
       AIRFLOW__CORE__EXECUTOR: SequentialExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      _PIP_ADDITIONAL_REQUIREMENTS: >
-        langchain
-        langchain-community
-        langchain-ollama
-        faiss-cpu
-        google-cloud-bigquery
-        pandas
-        python-dotenv
-        kafka-python-ng
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      # ── Kafka ─────────────────────────────
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9093
+      KAFKA_TOPIC: ${KAFKA_TOPIC}
+      # ── MetalpriceAPI ─────────────────────
+      METALPRICE_API_KEY: ${METALPRICE_API_KEY}
+      METALS: ${METALS}
+      # ── GCP ───────────────────────────────
+      GCP_PROJECT_ID: ${GCP_PROJECT_ID}
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp-key.json
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./gcp-key.json:/opt/airflow/gcp-key.json:ro
-    command: scheduler
+    command: bash -c "export PATH=/home/airflow/.local/bin:$$PATH && airflow scheduler"
 
 volumes:
   postgres-db-volume:

@@ -1,0 +1,15 @@
+FROM apache/airflow:3.1.8
+
+RUN pip install --no-cache-dir \
+    apache-airflow-providers-fab \ 
+    kafka-python-ng==2.2.3 \
+    requests==2.32.3 \
+    python-dotenv==1.0.1 \
+    google-cloud-bigquery==3.40.1 \
+    pyarrow \
+    db-dtypes \
+    langchain==1.2.12 \
+    langchain-community==0.4.1 \
+    langchain-ollama==1.0.1 \
+    faiss-cpu>=1.13.0 \
+    pandas==2.2.2
