@@ -19,7 +19,8 @@ from typing import Any
 
 import pandas as pd
 from airflow import DAG
-from airflow.providers.standard.operators.python import PythonOperator  # ← correct import for Airflow ≥ 2.7 / 2.9+
+from airflow.operators.python import PythonOperator           # ← FIXED: correct for Airflow 2.9.3
+
 from google.cloud import bigquery
 from google.api_core.exceptions import GoogleAPIError
 

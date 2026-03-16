@@ -46,70 +46,61 @@ services:
 
   postgres:
     image: postgres:15
-    container_name: airflow-postgres
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD", "pg_isready", "-U", "airflow"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
   airflow-init:
-    image: apache/airflow:2.11.2
-    container_name: airflow-init
+    image: apache/airflow:2.9.3
     depends_on:
-      postgres:
-        condition: service_healthy
+      - postgres
     env_file:
       - .env
     environment:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      _PIP_ADDITIONAL_REQUIREMENTS: >-
-        apache-airflow-providers-standard
-        langchain==0.2.* langchain-community==0.2.* langchain-ollama faiss-cpu
-        google-cloud-bigquery pandas python-dotenv
-    entrypoint: /bin/bash
-    command:
-      - -c
-      - |
-        set -e
-        pip install --no-cache-dir ${_PIP_ADDITIONAL_REQUIREMENTS}
-        echo "Initializing Airflow database..."
-        airflow db init
-        echo "Creating admin user..."
-        airflow users create \
-          --username admin \
-          --firstname Admin \
-          --lastname User \
-          --role Admin \
-          --email admin@example.com \
-          --password admin || echo "Admin user already exists"
-        echo "Airflow initialization complete."
+      _PIP_ADDITIONAL_REQUIREMENTS: >
+        langchain
+        langchain-community
+        langchain-ollama
+        faiss-cpu
+        google-cloud-bigquery
+        pandas
+        python-dotenv
+        kafka-python-ng
+    command: >
+      bash -c "pip install --no-cache-dir ${_PIP_ADDITIONAL_REQUIREMENTS} &&
+               airflow db init &&
+               airflow users create \
+                 --username admin \
+                 --firstname Admin \
+                 --lastname User \
+                 --role Admin \
+                 --email admin@example.com \
+                 --password admin"
 
   airflow-webserver:
-    image: apache/airflow:2.11.2
-    container_name: airflow-webserver
+    image: apache/airflow:2.9.3
     restart: always
     depends_on:
       - postgres
       - ollama
-      - airflow-init
     env_file:
       - .env
     environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-      AIRFLOW__WEBSERVER__EXPOSE_HOSTNAME: 'true'
-      _PIP_ADDITIONAL_REQUIREMENTS: >-
-        apache-airflow-providers-standard
-        langchain==0.2.* langchain-community==0.2.* langchain-ollama faiss-cpu
-        google-cloud-bigquery pandas python-dotenv
+      _PIP_ADDITIONAL_REQUIREMENTS: >
+        langchain
+        langchain-community
+        langchain-ollama
+        faiss-cpu
+        google-cloud-bigquery
+        pandas
+        python-dotenv
+        kafka-python-ng
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -124,23 +115,25 @@ services:
       retries: 5
 
   airflow-scheduler:
-    image: apache/airflow:2.11.2
-    container_name: airflow-scheduler
+    image: apache/airflow:2.9.3
     restart: always
     depends_on:
       - postgres
       - ollama
-      - airflow-init
     env_file:
       - .env
     environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-      _PIP_ADDITIONAL_REQUIREMENTS: >-
-        apache-airflow-providers-standard
-        langchain==0.2.* langchain-community==0.2.* langchain-ollama faiss-cpu
-        google-cloud-bigquery pandas python-dotenv
+      _PIP_ADDITIONAL_REQUIREMENTS: >
+        langchain
+        langchain-community
+        langchain-ollama
+        faiss-cpu
+        google-cloud-bigquery
+        pandas
+        python-dotenv
+        kafka-python-ng
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs

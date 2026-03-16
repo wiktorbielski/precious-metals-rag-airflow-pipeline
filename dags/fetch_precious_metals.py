@@ -3,7 +3,7 @@ import os
 import json
 import requests
 from airflow import DAG
-from airflow.providers.standard.operators.python import PythonOperator
+from airflow.operators.python import PythonOperator          # ← corrected import
 from kafka import KafkaProducer
 from dotenv import load_dotenv
 
