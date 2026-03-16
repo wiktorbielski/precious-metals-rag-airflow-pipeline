@@ -27,7 +27,7 @@ BOOTSTRAP_SERVERS = _resolve_bootstrap_servers()
 TOPIC             = os.getenv('KAFKA_TOPIC', 'commodity_prices')
 GCP_PROJECT_ID    = os.getenv('GCP_PROJECT_ID')
 KEY_PATH          = os.getenv('GCP_SERVICE_ACCOUNT_KEY_PATH')
-BATCH_SIZE        = int(os.getenv('CONSUMER_BATCH_SIZE', '10'))
+BATCH_SIZE        = int(os.getenv('CONSUMER_BATCH_SIZE', '4'))
 GROUP_ID          = os.getenv('KAFKA_CONSUMER_GROUP', 'commodity-prices-processing-group')
 
 REQUIRED_FIELDS = ['metal', 'price_usd', 'api_timestamp', 'ingestion_timestamp']
