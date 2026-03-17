@@ -54,11 +54,22 @@ REQUIRED_FIELDS   = ['metal', 'price_usd', 'api_timestamp', 'ingestion_timestamp
 if not GCP_PROJECT_ID:
     raise EnvironmentError("GCP_PROJECT_ID must be set in .env")
 
-# Ensure GCP Auth is handled
-if os.getenv('GCP_SERVICE_ACCOUNT_KEY_PATH'):
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getenv('GCP_SERVICE_ACCOUNT_KEY_PATH')
+# Path Logic: Fix for Windows vs Docker
+key_path = os.getenv('GCP_SERVICE_ACCOUNT_KEY_PATH', 'gcp-key.json')
 
-bq_client = bigquery.Client(project=GCP_PROJECT_ID)
+# If running on Windows (nt) and the path is hardcoded for Linux/Docker, 
+# we use the local version in the project root.
+if os.name == 'nt' and key_path.startswith('/opt/airflow/'):
+    logger.info("Windows detected: Translating Docker path to local path for gcp-key.json")
+    key_path = 'gcp-key.json'
+
+if not os.path.exists(key_path):
+    logger.error(f"GCP Key not found at: {os.path.abspath(key_path)}")
+    raise FileNotFoundError(f"Could not find {key_path}. Ensure it is in your project root.")
+
+# Explicitly initialize using the path
+bq_client = bigquery.Client.from_service_account_json(key_path, project=GCP_PROJECT_ID)
+logger.info(f"BigQuery Client initialized with project: {GCP_PROJECT_ID}")
 
 # ── CORE FUNCTIONS ───────────────────────────────────────────────────────────
 
@@ -102,16 +113,20 @@ def flush_to_bigquery(batch: List[Dict]) -> List[Dict]:
 def run_consumer():
     logger.info(f"Connecting to Kafka: {BOOTSTRAP_SERVERS} | Topic: {TOPIC}")
     
-    consumer = KafkaConsumer(
-        TOPIC,
-        bootstrap_servers=BOOTSTRAP_SERVERS,
-        value_deserializer=lambda m: json.loads(m.decode('utf-8')),
-        auto_offset_reset='earliest',
-        enable_auto_commit=True,
-        group_id=GROUP_ID,
-        session_timeout_ms=10000,
-        heartbeat_interval_ms=3000
-    )
+    try:
+        consumer = KafkaConsumer(
+            TOPIC,
+            bootstrap_servers=BOOTSTRAP_SERVERS,
+            value_deserializer=lambda m: json.loads(m.decode('utf-8')),
+            auto_offset_reset='earliest',
+            enable_auto_commit=True,
+            group_id=GROUP_ID,
+            session_timeout_ms=10000,
+            heartbeat_interval_ms=3000
+        )
+    except Exception as e:
+        logger.error(f"Could not connect to Kafka: {e}")
+        return
 
     data_buffer: List[Dict] = []
 
@@ -123,7 +138,9 @@ def run_consumer():
                 continue
 
             data_buffer.append(record)
-            logger.info(f"Buffered: {record['metal']} | ${record['price_usd']:.2f}")
+            # Safe logging for price formatting
+            price = record.get('price_usd', 0.0)
+            logger.info(f"Buffered: {record['metal']} | ${price:.2f}")
 
             if len(data_buffer) >= BATCH_SIZE:
                 data_buffer = flush_to_bigquery(data_buffer)
