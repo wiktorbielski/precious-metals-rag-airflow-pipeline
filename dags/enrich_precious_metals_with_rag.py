@@ -37,7 +37,7 @@ RAW_TABLE      = os.getenv("RAW_TABLE",     "raw_prices")
 ENRICHED_TABLE = os.getenv("ENRICHED_TABLE","enriched_analysis")
 OLLAMA_BASE_URL = "http://ollama:11434"
 LOOKBACK_HOURS  = 6
-MAX_ROWS        = 600   # 4 metals × 12 reads/hr × 6 hrs + headroom
+MAX_ROWS        = 600
 
 QUESTIONS = [
     # ── Current snapshot (most recent reading) ────────────────────────────────
@@ -262,7 +262,7 @@ with DAG(
     default_args=default_args,
     description="Local RAG analysis of recent precious metals prices (Ollama + FAISS) — runs every 30 min",
     schedule=timedelta(minutes=30),
-    start_date=datetime(2026, 3, 16),
+    start_date=datetime(2026, 3, 17),
     catchup=False,
     tags=["rag", "ai", "metals", "finance"],
     max_active_runs=1,

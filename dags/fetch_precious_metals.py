@@ -92,7 +92,7 @@ with DAG(
     default_args=default_args,
     description='Fetch gold/silver/platinum/palladium every 5 minutes via MetalpriceAPI',
     schedule='*/5 * * * *',              # every 5 minutes
-    start_date=datetime(2026, 3, 16),
+    start_date=datetime(2026, 3, 17),
     catchup=False,
     tags=['streaming', 'finance'],
 ) as dag:

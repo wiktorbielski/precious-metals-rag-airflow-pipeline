@@ -1,18 +1,40 @@
-# Python
+# ── Python ────────────────────────────────────────────────────────────────────
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.pdb
+.Python
+*.egg-info/
+dist/
+build/
 
-# Secrets & env
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Secrets & credentials ─────────────────────────────────────────────────────
 .env
+.env.*              # covers .env.local, .env.docker, .env.prod etc.
+!.env.example       # allow a safe template to be committed
+*.json              # catches gcp-key.json and any other credential files
+!package.json       # except Node package files if ever needed
 service-account.json
-
-# Airflow local logs & temp
-airflow/logs/
-
-# GCP key
 gcp-key.json
 
-# Logs
-logs/*
+# ── Airflow ───────────────────────────────────────────────────────────────────
+logs/
+airflow/logs/
+airflow.cfg
+airflow.db
+standalone_admin_password.txt
+webserver_config.py
+
+# ── IDEs ─────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
