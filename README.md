@@ -103,16 +103,16 @@ Optimized for high-frequency time-series ingestion and recent window lookbacks (
 
 | Column | Type | Description |
 | :--- | :--- | :--- |
-| `event_id` | **STRING** | Unique UUID for deduplication. |
+| `event_id` | **STRING** | Unique UUID for deduplication and audit traceability. |
 | `metal` | **STRING** | Metal symbol: XAU, XAG, XPT, XPD. |
-| `price_usd` | **FLOAT64** | Spot price in USD. |
-| `api_timestamp` | **TIMESTAMP** | Market time from the API response. |
-| `ingestion_timestamp`| **TIMESTAMP** | Time Airflow pushed data to Kafka. |
-| `processed_at` | **TIMESTAMP** | Time the Consumer wrote to BigQuery. |
-| `airflow_run_id` | **STRING** | Originating DAG Run ID for lineage. |
+| `price_usd` | **FLOAT64** | Spot price in USD (captured at 5-minute intervals). |
+| `api_timestamp` | **TIMESTAMP** | Market time exactly as reported by the upstream API. |
+| `ingestion_timestamp` | **TIMESTAMP** | Time the record was produced to the Kafka cluster. |
+| `processed_at` | **TIMESTAMP** | Time the Python Consumer successfully wrote the record to BigQuery. |
+| `airflow_run_id` | **STRING** | Originating Airflow DAG Run ID for end-to-end lineage. |
 
 * **Partitioning:** `DATE(ingestion_timestamp)` — Enables cost-efficient queries by scanning only relevant days.
-* **Clustering:** `metal` — Optimizes performance for commodity-specific analysis.
+* **Clustering:** `metal` — Optimizes performance for commodity-specific analysis and RAG context retrieval.
 
 ---
 
