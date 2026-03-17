@@ -2,7 +2,7 @@
 # Precious Metals RAG Pipeline — enrich_prices_dag.py
 # 
 # Purpose: BigQuery (Stats) -> FAISS -> Ollama (Reasoning) -> BigQuery
-# Optimized: Offloads arithmetic to SQL; LLM handles high-level synthesis.
+# Features: Data Quality Gate + Shift-Corrected Parsing + Failure Alerts.
 # =============================================================================
 
 from __future__ import annotations
@@ -15,7 +15,7 @@ from datetime import datetime, timedelta
 from typing import Any, List, Dict
 
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+from airflow.operators.python import PythonOperator, ShortCircuitOperator
 from google.cloud import bigquery
 
 from langchain_ollama import OllamaLLM, OllamaEmbeddings
@@ -31,8 +31,6 @@ ENRICHED_TABLE  = os.getenv("ENRICHED_TABLE", "enriched_analysis")
 OLLAMA_BASE_URL = os.getenv("OLLAMA_HOST", "http://ollama:11434")
 LOOKBACK_HOURS  = 6
 
-# ── REFINED ANALYTICAL QUESTIONS ─────────────────────────────────────────────
-# We focus on "Reasoning" rather than "Lookup"
 QUESTIONS = [
     "Identify any volatility spikes (>0.3% change) in the provided data. Describe if these moves appear coordinated across all metals or isolated to one.",
     "Compare the market behavior between the first half and second half of this session. Specifically for Gold (XAU), is the momentum accelerating or cooling down?",
@@ -42,6 +40,36 @@ QUESTIONS = [
 ]
 
 logger = logging.getLogger(__name__)
+
+# ── ALERTING / CALLBACKS ─────────────────────────────────────────────────────
+
+def on_failure_callback(context):
+    """
+    Function triggered when a task fails. 
+    You can extend this to send Slack/Discord webhooks.
+    """
+    dag_id = context['dag'].dag_id
+    task_id = context['task_instance'].task_id
+    err = context.get('exception')
+    execution_date = context.get('execution_date')
+    
+    # Standard alert log - in production, replace with Slack/Discord webhook
+    logging.error(f"""
+    🚨 AIRFLOW TASK FAILURE:
+    DAG:  {dag_id}
+    TASk: {task_id}
+    TIME: {execution_date}
+    ERR:  {err}
+    """)
+
+# ── DATA QUALITY GATE ────────────────────────────────────────────────────────
+
+def check_for_new_data(**context):
+    project_id = os.getenv("GCP_PROJECT_ID")
+    bq_client = bigquery.Client(project=project_id)
+    query = f"SELECT COUNT(*) as row_count FROM `{project_id}.{BQ_DATASET}.{RAW_TABLE}` WHERE ingestion_timestamp >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 HOUR)"
+    results = bq_client.query(query).to_dataframe()
+    return results.iloc[0]['row_count'] > 0
 
 # ── UTILITIES ────────────────────────────────────────────────────────────────
 
@@ -54,11 +82,7 @@ class MetalRAGAnalyst:
         return "\n\n".join([f"{d.page_content}" for d in docs])
 
     def create_vector_store(self, df: pd.DataFrame):
-        # We include the pre-calculated % change in the vector text
-        texts = [
-            f"Time: {r['ingestion_timestamp']} | Metal: {r['metal']} | Price: ${r['price_usd']:.2f} | Session Change: {r['session_pct_change']}%" 
-            for _, r in df.iterrows()
-        ]
+        texts = [f"Time: {r['ingestion_timestamp']} | Metal: {r['metal']} | Price: ${r['price_usd']:.2f} | Session Change: {r['session_pct_change']}%" for _, r in df.iterrows()]
         return FAISS.from_texts(texts=texts, embedding=self.embeddings)
 
 # ── MAIN TASK ────────────────────────────────────────────────────────────────
@@ -68,86 +92,53 @@ def run_rag_analysis(**context):
     ollama_model = os.getenv("OLLAMA_MODEL", "llama3.2:3b")
     ollama_embed = os.getenv("OLLAMA_EMBEDDING_MODEL", "nomic-embed-text")
 
-    # 1. Optimized Data Acquisition (Pre-calculating math in SQL)
     bq_client = bigquery.Client(project=project_id)
     query = f"""
-        SELECT 
-            metal, 
-            price_usd, 
-            ingestion_timestamp,
-            ROUND(((price_usd - FIRST_VALUE(price_usd) OVER(PARTITION BY metal ORDER BY ingestion_timestamp ASC)) / 
-                   NULLIF(FIRST_VALUE(price_usd) OVER(PARTITION BY metal ORDER BY ingestion_timestamp ASC), 0)) * 100, 3) as session_pct_change
+        SELECT metal, price_usd, ingestion_timestamp,
+        ROUND(((price_usd - FIRST_VALUE(price_usd) OVER(PARTITION BY metal ORDER BY ingestion_timestamp ASC)) / 
+               NULLIF(FIRST_VALUE(price_usd) OVER(PARTITION BY metal ORDER BY ingestion_timestamp ASC), 0)) * 100, 3) as session_pct_change
         FROM `{project_id}.{BQ_DATASET}.{RAW_TABLE}`
         WHERE ingestion_timestamp >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL {LOOKBACK_HOURS} HOUR)
         ORDER BY ingestion_timestamp ASC
     """
-    
     df = bq_client.query(query).to_dataframe()
     if df.empty: return
 
-    # 2. RAG Setup
     analyst = MetalRAGAnalyst(ollama_model, ollama_embed)
     vectorstore = analyst.create_vector_store(df)
     retriever = vectorstore.as_retriever(search_kwargs={"k": 15})
 
-    prompt = ChatPromptTemplate.from_template("""
-        You are a financial analyst. Use the provided context (which includes session % changes) to answer.
-        Provide your answers as a numbered list.
-        
-        Context: {context}
-        Questions: {question}
-        
-        Answer:""")
+    prompt = ChatPromptTemplate.from_template("You are a financial analyst. STRICT: Start with '1. ', no intro. Context: {context} Questions: {question} Answer:")
+    chain = ({"context": retriever | analyst.format_context, "question": RunnablePassthrough()} | prompt | analyst.llm | StrOutputParser())
 
-    chain = (
-        {"context": retriever | analyst.format_context, "question": RunnablePassthrough()}
-        | prompt | analyst.llm | StrOutputParser()
-    )
+    mega_answer = chain.invoke("\n".join([f"{i+1}. {q}" for i, q in enumerate(QUESTIONS)]))
+    parts = re.split(r'\n?\d+\.\s+', mega_answer.strip())
+    actual_answers = [p.strip() for p in parts if len(p.strip()) > 2]
+    if len(actual_answers) > len(QUESTIONS): actual_answers = actual_answers[1:]
 
-    # 3. Execution
-    run_id = str(uuid.uuid4())
-    run_at = datetime.utcnow().isoformat()
-    formatted_questions = "\n".join([f"{i+1}. {q}" for i, q in enumerate(QUESTIONS)])
-    
-    try:
-        mega_answer = chain.invoke(formatted_questions)
-        
-        # Parse numbered list back into rows
-        split_answers = re.split(r'\n?\d+\.\s+', mega_answer.strip())
-        split_answers = [a.strip() for a in split_answers if a.strip()]
+    run_id, run_at = str(uuid.uuid4()), datetime.utcnow().isoformat()
+    results = [{"run_id": run_id, "run_at": run_at, "question": QUESTIONS[idx], "answer": (actual_answers[idx] if idx < len(actual_answers) else "N/A"), "data_window_start": df["ingestion_timestamp"].min().isoformat(), "data_window_end": df["ingestion_timestamp"].max().isoformat()} for idx in range(len(QUESTIONS))]
 
-        results = []
-        for idx, single_answer in enumerate(split_answers):
-            if idx < len(QUESTIONS):
-                results.append({
-                    "run_id": run_id,
-                    "run_at": run_at,
-                    "question": QUESTIONS[idx],
-                    "answer": single_answer,
-                    "data_window_start": df["ingestion_timestamp"].min().isoformat(),
-                    "data_window_end": df["ingestion_timestamp"].max().isoformat()
-                })
-
-        if results:
-            bq_client.insert_rows_json(f"{project_id}.{BQ_DATASET}.{ENRICHED_TABLE}", results)
-            logger.info(f"Successfully saved {len(results)} rows for Run {run_id}")
-
-    except Exception as e:
-        logger.error(f"RAG Failure: {e}")
+    if results:
+        bq_client.insert_rows_json(f"{project_id}.{BQ_DATASET}.{ENRICHED_TABLE}", results)
 
 # ── DAG DEFINITION ────────────────────────────────────────────────────────────
 
 with DAG(
     dag_id="enrich_precious_metals_with_rag",
-    default_args={"owner": "analyst-team", "retries": 1},
+    default_args={
+        "owner": "analyst-team",
+        "retries": 1,
+        "retry_delay": timedelta(minutes=5),
+        "on_failure_callback": on_failure_callback, # Alerts triggered here
+    },
     schedule=timedelta(hours=1),
     start_date=datetime(2026, 3, 17),
     catchup=False,
-    max_active_runs=1
+    max_active_runs=1,
 ) as dag:
 
-    PythonOperator(
-        task_id="run_local_rag_analysis",
-        python_callable=run_rag_analysis,
-        execution_timeout=timedelta(minutes=10)
-    )
+    gate = ShortCircuitOperator(task_id="gate_check_new_data", python_callable=check_for_new_data)
+    rag  = PythonOperator(task_id="run_local_rag_analysis", python_callable=run_rag_analysis, execution_timeout=timedelta(minutes=15))
+
+    gate >> rag
