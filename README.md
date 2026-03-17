@@ -17,7 +17,7 @@ sequenceDiagram
     Airflow->>Kafka: Consume Batch
     Airflow->>BQ: Insert Raw Data (raw_prices)
 
-    Note over Airflow: DAG 2: RAG Analysis (Hourly)
+    Note over Airflow: DAG 2: RAG Analysis (Every 30 minutes)
     Airflow->>BQ: Query Last 6H Data Context
     BQ-->>Airflow: Aggregated Market Context
     Airflow->>Ollama: Send Context + 14 Analytical Prompts
