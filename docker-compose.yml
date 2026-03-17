@@ -34,7 +34,7 @@ x-airflow-common: &airflow-common
     GCP_SERVICE_ACCOUNT_KEY_PATH: /opt/airflow/gcp-key.json
   volumes:
     - ./dags:/opt/airflow/dags
-    - ./logs:/opt/airflow/logs
+    - airflow-logs:/opt/airflow/logs
     - ./gcp-key.json:/opt/airflow/gcp-key.json:ro
 
 services:
@@ -163,3 +163,4 @@ services:
 volumes:
   postgres-db-volume:
   ollama:
+  airflow-logs:
