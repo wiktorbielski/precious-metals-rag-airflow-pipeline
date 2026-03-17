@@ -92,7 +92,7 @@ docker compose up -d
 2. **Access Kafka UI:** Open [http://localhost:8080](http://localhost:8080) (Verify the `commodity_prices` topic exists).
 3. **Enable DAGs:** In the Airflow UI, toggle the following DAGs to **"On"**:
     * `fetch_precious_metals_prices` (Runs every 5 minutes)
-    * `enrich_precious_metals_with_rag` (Runs hourly)
+    * `enrich_precious_metals_with_rag` (Runs every 30 minutes)
   
 ##  Data Modeling & BigQuery Architecture
 
