@@ -131,7 +131,7 @@ Optimized for RAG reporting and grouping analysis by session.
 * **Partitioning:** `DATE(run_at)` — Organizes AI insights by date.
 * **Clustering:** `run_id` — Allows for fast retrieval of a full analysis session.
 
-## 📊 Sample RAG Analysis Output
+##  Sample RAG Analysis Output
 Below is a real-world example of the high-level reasoning performed by the **Llama 3.2** model.
 
 | Analytical Question | LLM Reasoning & Response |
@@ -144,7 +144,7 @@ Below is a real-world example of the high-level reasoning performed by the **Lla
 
 ---
 
-### 🧠 How it Works: RAG Orchestration
+###  How it Works: RAG Orchestration
 1. **Context Retrieval:** The system fetches raw price points and pre-calculated SQL metrics (Session % Change) from BigQuery.
 2. **Vector Embedding:** Data is converted into embeddings using `nomic-embed-text` and stored in a local FAISS index.
 3. **Augmented Generation:** The LLM (Llama 3.2 via Ollama) receives the top 15 most relevant price context chunks.
