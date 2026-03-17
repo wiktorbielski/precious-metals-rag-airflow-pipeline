@@ -20,7 +20,7 @@ sequenceDiagram
     Note over Airflow: DAG 2: RAG Analysis (Every 30 minutes)
     Airflow->>BQ: Query Last 6H Data Context
     BQ-->>Airflow: Aggregated Market Context
-    Airflow->>Ollama: Send Context + 14 Analytical Prompts
+    Airflow->>Ollama: Send Context + 5 Analytical Prompts
     Ollama-->>Airflow: AI Insights & Market Sentiment
     Airflow->>BQ: Insert AI Analysis (enriched_analysis)
 ```
@@ -33,7 +33,7 @@ This portfolio project demonstrates an advanced **End-to-End Data Engineering & 
 * **Extracts** live spot prices for Gold, Silver, Platinum, and Palladium every 5 minutes from the MetalPrice API.
 * **Streams & Buffers** the raw data through a local **Apache Kafka** cluster.
 * **Loads** the historical time-series data into **Google BigQuery**.
-* **Analyzes (RAG)** the market automatically every hour. Airflow pulls the recent BigQuery context, feeds it to a local LLM via **Ollama**, and asks 14 specific financial questions (trend analysis, volatility, anomalies).
+* **Analyzes (RAG)** the market automatically every hour. Airflow pulls the recent BigQuery context, feeds it to a local LLM via **Ollama**, and asks 5 specific financial questions (trend analysis, volatility, anomalies).
 * **Stores** the AI-generated insights back into BigQuery for visualization and reporting.
 * **Orchestrates** everything using **Apache Airflow** running entirely in Docker.
 
@@ -121,7 +121,7 @@ Optimized for RAG reporting and grouping analysis by session.
 
 | Column | Type | Description |
 | :--- | :--- | :--- |
-| `run_id` | **STRING** | UUID grouping all 14 questions from the same LLM session. |
+| `run_id` | **STRING** | UUID grouping all 5 questions from the same LLM session. |
 | `run_at` | **TIMESTAMP** | Execution time of the RAG task. |
 | `question` | **STRING** | The analytical prompt sent to Ollama. |
 | `answer` | **STRING** | The factual response from the local LLM (llama3.2). |
