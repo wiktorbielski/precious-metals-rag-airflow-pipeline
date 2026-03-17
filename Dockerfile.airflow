@@ -1,15 +1,53 @@
+# =============================================================================
+# Precious Metals RAG Pipeline — Dockerfile.airflow
+#
+# Base Image: Apache Airflow 3.1.8
+# Purpose: Custom image with providers for Kafka, GCP, and AI (LangChain/Ollama)
+# =============================================================================
+
 FROM apache/airflow:3.1.8
 
-RUN pip install --no-cache-dir \
-    apache-airflow-providers-fab \ 
-    kafka-python-ng==2.2.3 \
-    requests==2.32.3 \
-    python-dotenv==1.0.1 \
+# Switch to root to install system-level dependencies if needed
+# (Currently not required for these pip packages, but good for future-proofing)
+USER root
+
+# Switch back to airflow user to install Python packages
+USER airflow
+
+# ──────────────────────────────────────────────────────────────────────────
+# PYTHON DEPENDENCIES
+#
+# We install with --no-cache-dir to keep the image size small.
+# Packages are grouped by their role in the pipeline.
+# ──────────────────────────────────────────────────────────────────────────
+
+RUN pip install --no-cache-dir --user \
+    # --- Airflow Providers & Core ---
+    apache-airflow-providers-fab \
+    
+    # --- Data & Cloud (GCP / BigQuery) ---
     google-cloud-bigquery==3.40.1 \
     pyarrow \
     db-dtypes \
+    pandas==2.2.2 \
+    
+    # --- AI & RAG Stack (LangChain / Vector DB) ---
     langchain==1.2.12 \
     langchain-community==0.4.1 \
     langchain-ollama==1.0.1 \
     faiss-cpu>=1.13.0 \
-    pandas==2.2.2
+    
+    # --- Integration & Messaging ---
+    kafka-python-ng==2.2.3 \
+    requests==2.32.3 \
+    python-dotenv==1.0.1
+
+# ──────────────────────────────────────────────────────────────────────────
+# METADATA & CONFIG
+# ──────────────────────────────────────────────────────────────────────────
+
+# Ensure the .local/bin is on PATH
+ENV PATH="/home/airflow/.local/bin:${PATH}"
+
+# Set the working directory within the container
+WORKDIR /opt/airflow

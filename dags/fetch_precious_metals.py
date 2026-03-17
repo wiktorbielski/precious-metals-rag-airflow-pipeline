@@ -1,45 +1,64 @@
-from datetime import datetime, timedelta
+# =============================================================================
+# Precious Metals RAG Pipeline — fetch_prices_dag.py
+# 
+# Purpose: Polls MetalpriceAPI every 5m and streams data into Kafka.
+# Architecture: Airflow (Source) -> Kafka (Ingestion Layer)
+# =============================================================================
+
 import os
 import json
+import logging
 import requests
+from datetime import datetime, timedelta
+
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from kafka import KafkaProducer
-from dotenv import load_dotenv
 
-load_dotenv()
+# Load environment logic (Handled by Docker/Airflow, but good for local dev)
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
-# ── Config ───────────────────────────────────────────────────────────────────
+# ── CONFIGURATION ────────────────────────────────────────────────────────────
+# Defaults match the docker-compose internal network addresses
 BOOTSTRAP_SERVERS = os.getenv('KAFKA_BOOTSTRAP_SERVERS', 'kafka:9093')
 TOPIC             = os.getenv('KAFKA_TOPIC', 'commodity_prices')
 METALS            = os.getenv('METALS', 'XAU,XAG,XPT,XPD')
 API_KEY           = os.getenv('METALPRICE_API_KEY')
+BASE_URL          = "https://api.metalpriceapi.com/v1/latest"
 
-# Single call fetches ALL metals at once — far more quota-efficient
-# Response: { "success": true, "timestamp": 1234567890, "base": "USD",
-#             "rates": { "USDXAU": 1985.23, "USDXAG": 26.10, ... } }
-BASE_URL = "https://api.metalpriceapi.com/v1/latest"
+logger = logging.getLogger(__name__)
+
+# ── TASK LOGIC ───────────────────────────────────────────────────────────────
 
 def fetch_and_produce_metals(**context):
+    """
+    Fetches latest rates in a single API call and produces 1 message per metal.
+    """
     if not API_KEY:
-        raise ValueError("METALPRICE_API_KEY not set in environment")
+        raise ValueError("METALPRICE_API_KEY is missing from environment variables")
 
+    # Initialize Producer with production-safe settings
     producer = KafkaProducer(
         bootstrap_servers=BOOTSTRAP_SERVERS,
         value_serializer=lambda v: json.dumps(v).encode('utf-8'),
-        acks='all',
-        retries=5,
-        request_timeout_ms=30000,
+        acks='all',               # Ensure all replicas acknowledge
+        retries=5,                # Internal Kafka retries
+        request_timeout_ms=30000, # 30s timeout
     )
 
     try:
-        # One request for all metals
+        # 1. Fetch from External API
+        logger.info(f"Requesting rates for: {METALS}")
         resp = requests.get(
             BASE_URL,
             params={
                 'api_key':   API_KEY,
                 'base':      'USD',
-                'currencies': METALS,   # e.g. "XAU,XAG,XPT,XPD"
+                'currencies': METALS,
             },
             timeout=10,
         )
@@ -47,41 +66,46 @@ def fetch_and_produce_metals(**context):
         data = resp.json()
 
         if not data.get('success'):
-            raise ValueError(f"API returned error: {data}")
+            raise ValueError(f"MetalPriceAPI returned success=False: {data}")
 
-        rates      = data.get('rates', {})
-        api_ts     = datetime.fromtimestamp(data['timestamp']).isoformat() if data.get('timestamp') else None
-        ingest_ts  = datetime.utcnow().isoformat()
+        # 2. Process Timestamps
+        # api_ts: when the market actually recorded the price
+        # ingestion_ts: when our system processed it
+        rates        = data.get('rates', {})
+        api_ts       = datetime.fromtimestamp(data['timestamp']).isoformat() if data.get('timestamp') else None
+        ingestion_ts = datetime.utcnow().isoformat()
 
+        # 3. Stream to Kafka
         for metal in METALS.split(','):
             metal = metal.strip()
-            rate_key = f"USD{metal}"          # e.g. "USDXAU"
+            rate_key = f"USD{metal}"
 
             if rate_key not in rates:
-                print(f"[Airflow] WARN — {metal} not found in response, skipping")
+                logger.warning(f"Metal {metal} (key: {rate_key}) not found in API response.")
                 continue
 
             payload = {
                 'metal':               metal,
                 'price_usd':           rates[rate_key],
                 'api_timestamp':       api_ts,
-                'ingestion_timestamp': ingest_ts,
+                'ingestion_timestamp': ingestion_ts,
+                'airflow_run_id':      context.get('run_id'), # Useful for debugging
             }
 
             producer.send(TOPIC, value=payload)
-            print(f"[Airflow] SENT → {metal} = ${payload['price_usd']:.2f}")
+            logger.info(f"Streamed: {metal} @ ${payload['price_usd']:.2f}")
 
     except Exception as e:
-        print(f"[Airflow] ERROR: {e}")
-        raise  # preserves Airflow retry behaviour
-
+        logger.error(f"Failed to fetch/stream metals: {str(e)}")
+        raise  # Re-raising allows Airflow to trigger retries
     finally:
         producer.flush()
         producer.close()
 
+# ── DAG DEFINITION ───────────────────────────────────────────────────────────
 
 default_args = {
-    'owner':           'your-name',
+    'owner':           'precious_metals_team',
     'depends_on_past': False,
     'retries':         3,
     'retry_delay':     timedelta(minutes=2),
@@ -90,11 +114,11 @@ default_args = {
 with DAG(
     dag_id='fetch_precious_metals_prices',
     default_args=default_args,
-    description='Fetch gold/silver/platinum/palladium every 5 minutes via MetalpriceAPI',
-    schedule='*/5 * * * *',              # every 5 minutes
+    description='Polls MetalpriceAPI and produces events to Kafka topic',
+    schedule_interval='*/5 * * * *',  # Every 5 minutes
     start_date=datetime(2026, 3, 17),
     catchup=False,
-    tags=['streaming', 'finance'],
+    tags=['ingestion', 'kafka', 'metals'],
 ) as dag:
 
     fetch_task = PythonOperator(

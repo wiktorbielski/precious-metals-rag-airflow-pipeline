@@ -1,11 +1,25 @@
-kafka-python-ng==2.2.3          
-requests==2.32.3
-python-dotenv==1.0.1
-google-cloud-bigquery==3.40.1
-pyarrow                         
-db-dtypes                       
-langchain==1.2.12
-langchain-community==0.4.1
-langchain-ollama==1.0.1
-faiss-cpu>=1.13.0
-pandas==2.2.2
+# =============================================================================
+# Precious Metals RAG Pipeline — requirements.txt
+#
+# Usage: pip install -r requirements.txt
+# =============================================================================
+
+# ── CORE UTILITIES ───────────────────────────────────────────────────────────
+requests==2.32.3               # API communication (MetalpriceAPI)
+python-dotenv==1.0.1           # Environment variable management
+apache-airflow-providers-fab   # Airflow Flask App Builder provider
+
+# ── STREAMING & INTEGRATION ──────────────────────────────────────────────────
+kafka-python-ng==2.2.3         # Kafka producer/consumer client (Next Gen)
+
+# ── DATA & CLOUD (GCP / BIGQUERY) ────────────────────────────────────────────
+google-cloud-bigquery==3.40.1  # BigQuery Python client
+pyarrow                        # High-performance IO for BigQuery/Pandas
+db-dtypes                      # Data types support for BigQuery/Pandas
+pandas==2.2.2                  # Data manipulation and analysis
+
+# ── AI & RAG STACK (LANGCHAIN / OLLAMA) ──────────────────────────────────────
+langchain==1.2.12              # RAG orchestration framework
+langchain-community==0.4.1     # Community integrations for LangChain
+langchain-ollama==1.0.1        # Ollama-specific LangChain support
+faiss-cpu>=1.13.0              # Vector database for similarity search

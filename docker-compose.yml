@@ -1,77 +1,45 @@
+# =============================================================================
+# Precious Metals RAG Pipeline — docker-compose.yaml
+#
+# Architecture:
+#   Kafka (KRaft)   → Airflow (Fetch DAG)  → Kafka Topic
+#   Kafka Topic     → consumer.py          → BigQuery (raw_prices)
+#   BigQuery        → Airflow (Enrich DAG) → Ollama (RAG) → BigQuery (enriched)
+# =============================================================================
+
+# ── SHARED CONFIGURATION (YAML ANCHORS) ──────────────────────────────────────
+# Separating dependencies from common config to avoid "cycle detected" errors.
+x-airflow-deps: &airflow-deps
+  postgres:
+    condition: service_healthy
+  kafka:
+    condition: service_healthy
+
+x-airflow-common: &airflow-common
+  build:
+    context: .
+    dockerfile: Dockerfile.airflow
+  user: "${AIRFLOW_UID:-50000}:0"
+  env_file: .env
+  environment:
+    AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY:-}
+    # Infrastructure Links
+    KAFKA_BOOTSTRAP_SERVERS: kafka:9093
+    OLLAMA_HOST: http://ollama:11434
+    # GCP Configuration
+    GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp-key.json
+    GCP_SERVICE_ACCOUNT_KEY_PATH: /opt/airflow/gcp-key.json
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./gcp-key.json:/opt/airflow/gcp-key.json:ro
+
 services:
 
-  # ──────────────────────────────────────────
-  # KAFKA (KRaft mode, no Zookeeper)
-  # ──────────────────────────────────────────
-  kafka:
-    image: apache/kafka:3.8.0
-    container_name: kafka-broker
-    ports:
-      - "9092:9092"
-    environment:
-      KAFKA_NODE_ID: 1
-      KAFKA_PROCESS_ROLES: broker,controller
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
-      KAFKA_LISTENERS: CONTROLLER://0.0.0.0:9091,HOST://0.0.0.0:9092,DOCKER://0.0.0.0:9093
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,HOST:PLAINTEXT,DOCKER:PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: HOST://localhost:9092,DOCKER://kafka:9093
-      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
-      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9091
-      KAFKA_INTER_BROKER_LISTENER_NAME: DOCKER
-      KAFKA_LOG4J_ROOT_LOGLEVEL: WARN
-      KAFKA_TOOLS_LOG4J_LOGLEVEL: WARN
-    healthcheck:
-      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list"]
-      interval: 10s
-      timeout: 5s
-      retries: 10
-      start_period: 30s
-
-  # ──────────────────────────────────────────
-  # KAFKA UI
-  # ──────────────────────────────────────────
-  kafka-ui:
-    image: provectuslabs/kafka-ui:latest
-    container_name: kafka-ui
-    ports:
-      - "8080:8080"
-    environment:
-      KAFKA_CLUSTERS_0_NAME: local
-      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9093
-    depends_on:
-      kafka:
-        condition: service_healthy
-    restart: unless-stopped
-
-  # ──────────────────────────────────────────
-  # OLLAMA
-  # ──────────────────────────────────────────
-  ollama:
-    image: ollama/ollama:latest
-    container_name: ollama
-    ports:
-      - "11434:11434"
-    volumes:
-      - ollama:/root/.ollama
-    restart: unless-stopped
-
-  # ──────────────────────────────────────────
-  # OLLAMA INIT (pulls models once then exits)
-  # ──────────────────────────────────────────
-  ollama-init:
-    image: ollama/ollama:latest
-    container_name: ollama-init
-    depends_on:
-      - ollama
-    environment:
-      OLLAMA_HOST: http://ollama:11434
-    entrypoint: bash -c "sleep 15 && ollama pull nomic-embed-text && ollama pull llama3.2:3b && echo '[ollama-init] All models ready'"
-    restart: no
-
-  # ──────────────────────────────────────────
-  # POSTGRES (Airflow metadata DB)
-  # ──────────────────────────────────────────
+  # ── DATABASE: Airflow Metadata ─────────────────────────────────────────────
   postgres:
     image: postgres:15
     container_name: postgres
@@ -85,107 +53,113 @@ services:
       test: ["CMD", "pg_isready", "-U", "airflow"]
       interval: 10s
       timeout: 5s
-      retries: 10
-      start_period: 15s
+      retries: 5
     restart: unless-stopped
 
-  # ──────────────────────────────────────────
-  # AIRFLOW INIT (runs once then exits)
-  # ──────────────────────────────────────────
+  # ── STREAMING: Kafka Broker (KRaft) ────────────────────────────────────────
+  kafka:
+    image: apache/kafka:3.8.0
+    container_name: kafka-broker
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9091
+      KAFKA_LISTENERS: CONTROLLER://0.0.0.0:9091,HOST://0.0.0.0:9092,DOCKER://0.0.0.0:9093
+      KAFKA_INTER_BROKER_LISTENER_NAME: DOCKER
+      KAFKA_ADVERTISED_LISTENERS: HOST://localhost:9092,DOCKER://kafka:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,HOST:PLAINTEXT,DOCKER:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LOG4J_ROOT_LOGLEVEL: WARN
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9093
+    depends_on:
+      kafka:
+        condition: service_healthy
+
+  # ── AI: Ollama LLM Engine ──────────────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+
+  ollama-init:
+    image: ollama/ollama:latest
+    container_name: ollama-init
+    depends_on:
+      - ollama
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: >
+      bash -c "
+        echo '[ollama-init] Waiting for Ollama to be ready...' &&
+        sleep 15 &&
+        ollama pull ${OLLAMA_EMBEDDING_MODEL:-nomic-embed-text} &&
+        ollama pull ${OLLAMA_MODEL:-llama3.2:3b} &&
+        echo '[ollama-init] All models ready'
+      "
+    restart: no
+
+  # ── ORCHESTRATION: Airflow Components ──────────────────────────────────────
   airflow-init:
-    build:
-      context: .
-      dockerfile: Dockerfile.airflow
+    <<: *airflow-common
     container_name: airflow-init
     depends_on:
-      postgres:
-        condition: service_healthy
-    environment:
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__FERNET_KEY: ''
-      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-    command: bash -c "export PATH=/home/airflow/.local/bin:$$PATH && airflow db migrate && airflow users create --username admin --firstname Admin --lastname User --role Admin --email admin@example.com --password admin"
+      <<: *airflow-deps
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db migrate
+        airflow users create \
+            --username admin \
+            --firstname Admin \
+            --lastname User \
+            --role Admin \
+            --email admin@example.com \
+            --password admin
 
-  # ──────────────────────────────────────────
-  # AIRFLOW WEBSERVER
-  # ──────────────────────────────────────────
   airflow-webserver:
-    build:
-      context: .
-      dockerfile: Dockerfile.airflow
+    <<: *airflow-common
     container_name: airflow-webserver
-    restart: always
-    depends_on:
-      postgres:
-        condition: service_healthy
-      kafka:
-        condition: service_healthy
-      airflow-init:
-        condition: service_completed_successfully
-    environment:
-      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-      # ── Kafka ─────────────────────────────
-      KAFKA_BOOTSTRAP_SERVERS: kafka:9093
-      KAFKA_TOPIC: ${KAFKA_TOPIC}
-      # ── MetalpriceAPI ─────────────────────
-      METALPRICE_API_KEY: ${METALPRICE_API_KEY}
-      METALS: ${METALS}
-      # ── GCP ───────────────────────────────
-      GCP_PROJECT_ID: ${GCP_PROJECT_ID}
-      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp-key.json
-      GCP_SERVICE_ACCOUNT_KEY_PATH: /opt/airflow/gcp-key.json
-      # ── Ollama / RAG ──────────────────────
-      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2:3b}
-      OLLAMA_EMBEDDING_MODEL: ${OLLAMA_EMBEDDING_MODEL:-nomic-embed-text}
-    volumes:
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-      - ./gcp-key.json:/opt/airflow/gcp-key.json:ro
     ports:
       - "8081:8080"
-    command: bash -c "export PATH=/home/airflow/.local/bin:$$PATH && airflow webserver"
-
-  # ──────────────────────────────────────────
-  # AIRFLOW SCHEDULER
-  # ──────────────────────────────────────────
-  airflow-scheduler:
-    build:
-      context: .
-      dockerfile: Dockerfile.airflow
-    container_name: airflow-scheduler
+    command: webserver
     restart: always
     depends_on:
-      postgres:
-        condition: service_healthy
-      kafka:
-        condition: service_healthy
+      <<: *airflow-deps
       airflow-init:
         condition: service_completed_successfully
-    environment:
-      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-      # ── Kafka ─────────────────────────────
-      KAFKA_BOOTSTRAP_SERVERS: kafka:9093
-      KAFKA_TOPIC: ${KAFKA_TOPIC}
-      # ── MetalpriceAPI ─────────────────────
-      METALPRICE_API_KEY: ${METALPRICE_API_KEY}
-      METALS: ${METALS}
-      # ── GCP ───────────────────────────────
-      GCP_PROJECT_ID: ${GCP_PROJECT_ID}
-      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp-key.json
-      GCP_SERVICE_ACCOUNT_KEY_PATH: /opt/airflow/gcp-key.json
-      # ── Ollama / RAG ──────────────────────
-      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2:3b}
-      OLLAMA_EMBEDDING_MODEL: ${OLLAMA_EMBEDDING_MODEL:-nomic-embed-text}
-    volumes:
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-      - ./gcp-key.json:/opt/airflow/gcp-key.json:ro
-    command: bash -c "export PATH=/home/airflow/.local/bin:$$PATH && airflow scheduler"
 
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: airflow-scheduler
+    command: scheduler
+    restart: always
+    depends_on:
+      <<: *airflow-deps
+      airflow-init:
+        condition: service_completed_successfully
+
+# ── PERSISTENCE ──────────────────────────────────────────────────────────────
 volumes:
   postgres-db-volume:
   ollama:
