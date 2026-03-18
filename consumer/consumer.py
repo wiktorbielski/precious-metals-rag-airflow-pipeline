@@ -37,18 +37,18 @@ def _resolve_bootstrap_servers() -> str:
         socket.getaddrinfo(host, None)
         return env_val
     except socket.gaierror:
-        logger.warning(f"Host '{host}' not resolvable. Falling back to localhost:9092")
+        logger.warning(f"Host '{host}' not resolvable. Falling back to 9092.")
         return 'localhost:9092'
 
 # ── CONFIGURATION ────────────────────────────────────────────────────────────
 BOOTSTRAP_SERVERS = _resolve_bootstrap_servers()
-TOPIC             = os.getenv('KAFKA_TOPIC', 'commodity_prices')
-GCP_PROJECT_ID    = os.getenv('GCP_PROJECT_ID')
-BATCH_SIZE        = int(os.getenv('CONSUMER_BATCH_SIZE', '4'))
-GROUP_ID          = os.getenv('KAFKA_CONSUMER_GROUP', 'metals-consumer-group')
-TABLE_ID          = f"{GCP_PROJECT_ID}.commodity_dataset.raw_prices"
+TOPIC = os.getenv('KAFKA_TOPIC', 'commodity_prices')
+GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID')
+BATCH_SIZE = int(os.getenv('CONSUMER_BATCH_SIZE', '4'))
+GROUP_ID = os.getenv('KAFKA_CONSUMER_GROUP', 'metals-consumer-group')
+TABLE_ID = f"{GCP_PROJECT_ID}.commodity_dataset.raw_prices"
 
-REQUIRED_FIELDS   = ['metal', 'price_usd', 'api_timestamp', 'ingestion_timestamp']
+REQUIRED_FIELDS = ['metal', 'price_usd', 'api_timestamp', 'ingestion_timestamp']
 
 # ── CLIENT INITIALIZATION ─────────────────────────────────────────────────────
 if not GCP_PROJECT_ID:
@@ -57,52 +57,52 @@ if not GCP_PROJECT_ID:
 # Path Logic: Fix for Windows vs Docker
 key_path = os.getenv('GCP_SERVICE_ACCOUNT_KEY_PATH', 'gcp-key.json')
 
-# If running on Windows (nt) and the path is hardcoded for Linux/Docker, 
-# we use the local version in the project root.
+# Path Translation for Windows/Local Dev
 if os.name == 'nt' and key_path.startswith('/opt/airflow/'):
-    logger.info("Windows detected: Translating Docker path to local path for gcp-key.json")
+    logger.info("Windows detected: Translating Docker path to local path.")
     key_path = 'gcp-key.json'
 
 if not os.path.exists(key_path):
     logger.error(f"GCP Key not found at: {os.path.abspath(key_path)}")
-    raise FileNotFoundError(f"Could not find {key_path}. Ensure it is in your project root.")
+    raise FileNotFoundError(f"Could not find {key_path}.")
 
-# Explicitly initialize using the path
-bq_client = bigquery.Client.from_service_account_json(key_path, project=GCP_PROJECT_ID)
-logger.info(f"BigQuery Client initialized with project: {GCP_PROJECT_ID}")
+bq_client = bigquery.Client.from_service_account_json(
+    key_path, 
+    project=GCP_PROJECT_ID
+)
+logger.info(f"BigQuery Client active for project: {GCP_PROJECT_ID}")
 
 # ── CORE FUNCTIONS ───────────────────────────────────────────────────────────
 
 def validate_and_clean(record: Dict) -> bool:
     """Ensures records meet schema requirements before BQ insertion."""
     if record.get('price_usd') is None:
-        logger.warning(f"Skipping record: Missing price for {record.get('metal', 'UNKNOWN')}")
+        metal = record.get('metal', 'UNKNOWN')
+        logger.warning(f"Skipping record: Missing price for {metal}")
         return False
     
-    # Fill missing optional metadata with None to maintain column alignment
     for field in REQUIRED_FIELDS:
         if field not in record:
             record[field] = None
             
-    # Add a unique processing ID and timestamp for audit trails
     record['event_id'] = str(uuid.uuid4())
     record['processed_at'] = datetime.now(timezone.utc).isoformat()
     return True
 
 def flush_to_bigquery(batch: List[Dict]) -> List[Dict]:
-    """Attempts to insert batch. Returns empty list on success, batch on failure."""
+    """Attempts to insert batch. Returns empty list on success."""
     if not batch:
         return []
 
-    logger.info(f"Streaming {len(batch)} records to BigQuery: {TABLE_ID}")
+    logger.info(f"Streaming {len(batch)} records to BigQuery...")
     try:
         errors = bq_client.insert_rows_json(TABLE_ID, batch)
         if not errors:
-            logger.info("Successfully committed batch.")
+            logger.info("Batch committed successfully.")
             return []
         
         logger.error(f"BigQuery Insert Errors: {errors}")
-        return batch # Keep in buffer for retry
+        return batch  # Return batch for potential retry logic
 
     except (GoogleAPIError, Exception) as e:
         logger.error(f"Critical BigQuery failure: {str(e)}")
@@ -111,6 +111,7 @@ def flush_to_bigquery(batch: List[Dict]) -> List[Dict]:
 # ── MAIN EXECUTION ───────────────────────────────────────────────────────────
 
 def run_consumer():
+    """Main loop for consuming and flushing Kafka messages."""
     logger.info(f"Connecting to Kafka: {BOOTSTRAP_SERVERS} | Topic: {TOPIC}")
     
     try:
@@ -125,7 +126,7 @@ def run_consumer():
             heartbeat_interval_ms=3000
         )
     except Exception as e:
-        logger.error(f"Could not connect to Kafka: {e}")
+        logger.error(f"Kafka connection failed: {e}")
         return
 
     data_buffer: List[Dict] = []
@@ -138,11 +139,13 @@ def run_consumer():
                 continue
 
             data_buffer.append(record)
-            # Safe logging for price formatting
+            
+            # Use safe get to prevent formatting errors if price is None
             price = record.get('price_usd', 0.0)
             logger.info(f"Buffered: {record['metal']} | ${price:.2f}")
 
             if len(data_buffer) >= BATCH_SIZE:
+                # Re-assign data_buffer to empty list only if flush succeeds
                 data_buffer = flush_to_bigquery(data_buffer)
 
     except KeyboardInterrupt:
