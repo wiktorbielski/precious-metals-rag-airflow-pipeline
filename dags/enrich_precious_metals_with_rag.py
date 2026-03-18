@@ -53,7 +53,7 @@ def on_failure_callback(context):
     err = context.get('exception')
     execution_date = context.get('execution_date')
     
-    # Standard alert log - in production, replace with Slack/Discord webhook
+    # Standard alert log
     logging.error(f"""
     🚨 AIRFLOW TASK FAILURE:
     DAG:  {dag_id}
