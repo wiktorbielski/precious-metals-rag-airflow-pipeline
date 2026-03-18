@@ -13,6 +13,7 @@ import re
 import pandas as pd
 from datetime import datetime, timedelta
 from typing import Any, List, Dict
+from airflow.utils.dates import days_ago
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator, ShortCircuitOperator
@@ -67,7 +68,12 @@ def on_failure_callback(context):
 def check_for_new_data(**context):
     project_id = os.getenv("GCP_PROJECT_ID")
     bq_client = bigquery.Client(project=project_id)
-    query = f"SELECT COUNT(*) as row_count FROM `{project_id}.{BQ_DATASET}.{RAW_TABLE}` WHERE ingestion_timestamp >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 HOUR)"
+    # UPDATED: Change INTERVAL 1 HOUR to INTERVAL 30 MINUTE
+    query = f"""
+        SELECT COUNT(*) as row_count 
+        FROM `{project_id}.{BQ_DATASET}.{RAW_TABLE}` 
+        WHERE ingestion_timestamp >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 30 MINUTE)
+    """
     results = bq_client.query(query).to_dataframe()
     return results.iloc[0]['row_count'] > 0
 
@@ -130,10 +136,10 @@ with DAG(
         "owner": "analyst-team",
         "retries": 1,
         "retry_delay": timedelta(minutes=5),
-        "on_failure_callback": on_failure_callback, # Alerts triggered here
+        "on_failure_callback": on_failure_callback,
     },
-    schedule=timedelta(hours=1),
-    start_date=datetime(2026, 3, 17),
+    schedule=timedelta(minutes=30),
+    start_date=days_ago(1),
     catchup=False,
     max_active_runs=1,
 ) as dag:

@@ -12,6 +12,7 @@ import requests
 from datetime import datetime, timedelta
 
 from airflow import DAG
+from airflow.utils.dates import days_ago
 from airflow.operators.python import PythonOperator
 from kafka import KafkaProducer
 
@@ -115,8 +116,8 @@ with DAG(
     dag_id='fetch_precious_metals_prices',
     default_args=default_args,
     description='Polls MetalpriceAPI and produces events to Kafka topic',
-    schedule_interval='*/5 * * * *',  # Every 5 minutes
-    start_date=datetime(2026, 3, 17),
+    schedule_interval='*/5 * * * *',  
+    start_date=days_ago(1), 
     catchup=False,
     tags=['ingestion', 'kafka', 'metals'],
 ) as dag:
