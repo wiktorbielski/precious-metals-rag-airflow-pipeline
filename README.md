@@ -1,4 +1,4 @@
-# Precious Metals RAG Pipeline
+# 🪙 Precious Metals RAG Pipeline
 
 **Automated, AI-driven market analysis for Precious Metals (Gold, Silver, Platinum, Palladium)** using Apache Airflow, Kafka, Google BigQuery, and Local LLMs (Ollama) for Retrieval-Augmented Generation (RAG).
 
@@ -25,11 +25,11 @@ sequenceDiagram
     Airflow->>BQ: Insert AI Analysis (enriched_analysis)
 ```
 
-##  Project Overview
+## 📖 Project Overview
 
 This portfolio project demonstrates an advanced **End-to-End Data Engineering & AI Pipeline**. It moves beyond basic ETL by integrating **Retrieval-Augmented Generation (RAG)** directly into the data flow.
 
-### What it does:
+### ✨ What it does:
 * **Extracts** live spot prices for Gold, Silver, Platinum, and Palladium every 5 minutes from the MetalPrice API.
 * **Streams & Buffers** the raw data through a local **Apache Kafka** cluster.
 * **Loads** the historical time-series data into **Google BigQuery**.
@@ -39,7 +39,7 @@ This portfolio project demonstrates an advanced **End-to-End Data Engineering & 
 
 ---
 
-##  Technologies & Rationale
+## 💡 Technologies & Rationale
 
 | Layer | Technology | Why chosen? |
 | :--- | :--- | :--- |
@@ -52,9 +52,9 @@ This portfolio project demonstrates an advanced **End-to-End Data Engineering & 
 
 ---
 
-##  How to Run – Step-by-Step (Clean Slate Guide)
+## 🚀 How to Run – Step-by-Step (Clean Slate Guide)
 
-### Prerequisites
+### 📋 Prerequisites
 * **Docker & Docker Compose** installed and running.
 * **Google Cloud Project** with the BigQuery API enabled.
 * **GCP Service Account JSON Key** (Roles needed: BigQuery Data Editor, BigQuery Job User).
@@ -94,7 +94,7 @@ docker compose up -d
     * `fetch_precious_metals_prices` (Runs every 5 minutes)
     * `enrich_precious_metals_with_rag` (Runs every 30 minutes)
   
-##  Data Modeling & BigQuery Architecture
+## 📊 Data Modeling & BigQuery Architecture
 
 The pipeline follows a tiered data architecture, utilizing **Partitioning** and **Clustering** in Google BigQuery to optimize for performance and cost.
 
@@ -131,7 +131,7 @@ Optimized for RAG reporting and grouping analysis by session.
 * **Partitioning:** `DATE(run_at)` — Organizes AI insights by date.
 * **Clustering:** `run_id` — Allows for fast retrieval of a full analysis session.
 
-##  Sample RAG Analysis Output
+## 🧠 Sample RAG Analysis Output
 Below is a real-world example of the high-level reasoning performed by the **Llama 3.2** model.
 
 | Analytical Question | LLM Reasoning & Response |
