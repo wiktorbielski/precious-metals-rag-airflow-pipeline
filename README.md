@@ -149,3 +149,15 @@ Below is a real-world example of the high-level reasoning performed by the **Lla
 2. **Vector Embedding:** Data is converted into embeddings using `nomic-embed-text` and stored in a local FAISS index.
 3. **Augmented Generation:** The LLM (Llama 3.2 via Ollama) receives the top 15 most relevant price context chunks.
 4. **Structured Parsing:** A custom Python Regex parser breaks the LLM's natural language response into structured rows to prevent "row-shifting" and ensure 1:1 mapping between questions and answers in BigQuery.
+
+### 📂 Data Inventory & File Structure
+
+This project includes a `data/` directory containing query exports from BigQuery. These files serve as a snapshot of the pipeline's output at different stages:
+
+| File Name | Source Table | Description |
+| :--- | :--- | :--- |
+| [raw_prices.json](./data/raw_prices.json) | `raw_prices` | 5-minute interval spot prices for XAU, XAG, XPT, XPD. |
+| [enriched_rag_results.json](./data/enriched_rag_results.json) | `enriched_analysis` | Archive of all historical RAG questions and LLM answers. |
+| [qa_latest_session.json](./data/qa_latest_rag_session_results.json) | `enriched_analysis` | The 5 analytical responses from the most recent Airflow run. |
+| [qa_momentum_tracker.json](./data/qa_momentum_tracker.json) | `enriched_analysis` | Historical trend of the "Momentum" specific question for AI tracking. |
+| [qa_ratio_analysis.json](./data/qa_ratio_analysis_history.json) | `enriched_analysis` | Historical log of Gold-to-Silver (XAU/XAG) ratio insights. |
