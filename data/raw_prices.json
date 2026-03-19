@@ -1,0 +1,2337 @@
+[{
+  "event_id": "64b05760-d0ad-4d28-a86c-d21616e74513",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:05:03.107477 UTC",
+  "processed_at": "2026-03-18 14:05:03.113595 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:00:00+00:00"
+}, {
+  "event_id": "3694649a-9a32-432a-b5a8-dde2f079ff38",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:05:03.107477 UTC",
+  "processed_at": "2026-03-18 14:05:03.115758 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:00:00+00:00"
+}, {
+  "event_id": "e89bdbd0-f548-43e3-8156-be0d673c65ba",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:05:03.107477 UTC",
+  "processed_at": "2026-03-18 14:05:03.118875 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:00:00+00:00"
+}, {
+  "event_id": "4662396f-5ee9-45e5-8d95-fad882cbd048",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:05:03.107477 UTC",
+  "processed_at": "2026-03-18 14:05:03.119152 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:00:00+00:00"
+}, {
+  "event_id": "71cbbe05-6dea-4da5-8288-f620ad1bc963",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:10:03.203440 UTC",
+  "processed_at": "2026-03-18 14:10:03.209593 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:05:00+00:00"
+}, {
+  "event_id": "729d9c31-530e-4e1c-8dbf-171ef4656232",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:10:03.203440 UTC",
+  "processed_at": "2026-03-18 14:10:03.210013 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:05:00+00:00"
+}, {
+  "event_id": "b5adaed4-9ef8-496d-9104-4ea66b047741",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:10:03.203440 UTC",
+  "processed_at": "2026-03-18 14:10:03.212011 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:05:00+00:00"
+}, {
+  "event_id": "bc40d51f-0eb9-472d-8789-c70329896718",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:10:03.203440 UTC",
+  "processed_at": "2026-03-18 14:10:03.212217 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:05:00+00:00"
+}, {
+  "event_id": "eef1198b-9c2c-498a-8f97-4672a0e755b9",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:15:02.885847 UTC",
+  "processed_at": "2026-03-18 14:15:02.891799 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:10:00+00:00"
+}, {
+  "event_id": "111d9856-106d-4fcb-9cb1-be2a67037f50",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:15:02.885847 UTC",
+  "processed_at": "2026-03-18 14:15:02.894279 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:10:00+00:00"
+}, {
+  "event_id": "b84ba479-a19f-4e24-a397-a1db20cf102e",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:15:02.885847 UTC",
+  "processed_at": "2026-03-18 14:15:02.894594 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:10:00+00:00"
+}, {
+  "event_id": "7aa508f4-b41a-43b2-8d51-397fbe7ae573",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:15:02.885847 UTC",
+  "processed_at": "2026-03-18 14:15:02.896251 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:10:00+00:00"
+}, {
+  "event_id": "1260d6f2-6485-4fcb-98d2-0ec011b26f4f",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:20:02.768597 UTC",
+  "processed_at": "2026-03-18 14:20:02.774384 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:15:00+00:00"
+}, {
+  "event_id": "982e63a0-e453-4b9a-82f1-312ca1cbe8d6",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:20:02.768597 UTC",
+  "processed_at": "2026-03-18 14:20:02.776534 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:15:00+00:00"
+}, {
+  "event_id": "82e287cf-0a2f-4156-8972-44004b29a083",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:20:02.768597 UTC",
+  "processed_at": "2026-03-18 14:20:02.776761 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:15:00+00:00"
+}, {
+  "event_id": "3e55dafc-cd28-49a9-89ae-11b9734094ae",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:20:02.768597 UTC",
+  "processed_at": "2026-03-18 14:20:02.776931 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:15:00+00:00"
+}, {
+  "event_id": "13d36b33-e40d-432f-bfc3-73f53137d62d",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:25:03.029891 UTC",
+  "processed_at": "2026-03-18 14:25:03.036306 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:20:00+00:00"
+}, {
+  "event_id": "a5ff431f-64e5-4fe2-a6ef-1793723d575c",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:25:03.029891 UTC",
+  "processed_at": "2026-03-18 14:25:03.038307 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:20:00+00:00"
+}, {
+  "event_id": "8a899244-f06e-4bfa-a598-867b286400dd",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:25:03.029891 UTC",
+  "processed_at": "2026-03-18 14:25:03.038550 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:20:00+00:00"
+}, {
+  "event_id": "b82904cb-2a1c-4569-b407-06f17e1f4b2b",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:25:03.029891 UTC",
+  "processed_at": "2026-03-18 14:25:03.038709 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:20:00+00:00"
+}, {
+  "event_id": "96b4f6ba-77c9-4b52-acad-020585ae85b5",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:30:08.526338 UTC",
+  "processed_at": "2026-03-18 14:30:08.533346 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:25:00+00:00"
+}, {
+  "event_id": "19c3bfe9-052a-4fb6-afdd-b255fec31aab",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:30:08.526338 UTC",
+  "processed_at": "2026-03-18 14:30:08.533705 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:25:00+00:00"
+}, {
+  "event_id": "dd9d67a5-ee2a-4b54-a247-f9996b2d3da6",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:30:08.526338 UTC",
+  "processed_at": "2026-03-18 14:30:08.535406 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:25:00+00:00"
+}, {
+  "event_id": "9eb6d37a-703e-4967-8434-4f97acc5699a",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:30:08.526338 UTC",
+  "processed_at": "2026-03-18 14:30:08.535612 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:25:00+00:00"
+}, {
+  "event_id": "a769a78a-38cf-4c30-8dc7-840f2846b095",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:35:03.175546 UTC",
+  "processed_at": "2026-03-18 14:35:03.182474 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:30:00+00:00"
+}, {
+  "event_id": "bcde6346-d8c3-4e5a-bd3a-7a9b1554b8c9",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:35:03.175546 UTC",
+  "processed_at": "2026-03-18 14:35:03.184476 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:30:00+00:00"
+}, {
+  "event_id": "4b8f02b2-f034-4438-b64c-dfad438092d1",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:35:03.175546 UTC",
+  "processed_at": "2026-03-18 14:35:03.184682 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:30:00+00:00"
+}, {
+  "event_id": "406dbfbb-7024-4de5-aa5f-b019a6bc5670",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:35:03.175546 UTC",
+  "processed_at": "2026-03-18 14:35:03.184807 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:30:00+00:00"
+}, {
+  "event_id": "1695aa46-a471-42a3-b170-404028a0cb0f",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:40:03.191848 UTC",
+  "processed_at": "2026-03-18 14:40:03.198002 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:35:00+00:00"
+}, {
+  "event_id": "25beee2b-d8f6-4c79-8a6a-4d1bc6449553",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:40:03.191848 UTC",
+  "processed_at": "2026-03-18 14:40:03.200088 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:35:00+00:00"
+}, {
+  "event_id": "09d48368-826d-43c7-af33-8e215ce92f05",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:40:03.191848 UTC",
+  "processed_at": "2026-03-18 14:40:03.200325 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:35:00+00:00"
+}, {
+  "event_id": "e29313b0-fb31-459d-837d-d85cf94c9e71",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:40:03.191848 UTC",
+  "processed_at": "2026-03-18 14:40:03.200463 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:35:00+00:00"
+}, {
+  "event_id": "a1a185b2-f3d5-4901-a9f2-66a223112fd9",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:45:03.075849 UTC",
+  "processed_at": "2026-03-18 14:45:03.081878 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:40:00+00:00"
+}, {
+  "event_id": "e311406d-42ac-4a46-be82-7910c43392c0",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:45:03.075849 UTC",
+  "processed_at": "2026-03-18 14:45:03.083686 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:40:00+00:00"
+}, {
+  "event_id": "57f354c7-3729-4d0a-83e9-7b03a9ad1765",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:45:03.075849 UTC",
+  "processed_at": "2026-03-18 14:45:03.083897 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:40:00+00:00"
+}, {
+  "event_id": "b90a9f01-1bc4-471b-8b50-0f7eba40b1b5",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:45:03.075849 UTC",
+  "processed_at": "2026-03-18 14:45:03.084067 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:40:00+00:00"
+}, {
+  "event_id": "a98e9a8e-7a33-49fb-b987-b4a67eaa88e6",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:50:03.024516 UTC",
+  "processed_at": "2026-03-18 14:50:03.030717 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:45:00+00:00"
+}, {
+  "event_id": "3acd908f-5ff0-49f8-a8ca-ea83d1f94909",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:50:03.024516 UTC",
+  "processed_at": "2026-03-18 14:50:03.032711 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:45:00+00:00"
+}, {
+  "event_id": "d42f16b4-51ed-4da7-8b2c-42644ec006ca",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:50:03.024516 UTC",
+  "processed_at": "2026-03-18 14:50:03.032976 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:45:00+00:00"
+}, {
+  "event_id": "ba85a3e1-ebf4-4848-a941-0089b827b121",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:50:03.024516 UTC",
+  "processed_at": "2026-03-18 14:50:03.033177 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:45:00+00:00"
+}, {
+  "event_id": "8714fb3a-1366-4b7c-b804-a6af355a9f84",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:55:03.524812 UTC",
+  "processed_at": "2026-03-18 14:55:03.529595 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:50:00+00:00"
+}, {
+  "event_id": "94006d7f-69b1-4d50-917f-d6c5233593b3",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:55:03.524812 UTC",
+  "processed_at": "2026-03-18 14:55:03.531790 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:50:00+00:00"
+}, {
+  "event_id": "bdb99bfe-3894-49f2-ad1b-309d05a7e61f",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:55:03.524812 UTC",
+  "processed_at": "2026-03-18 14:55:03.532035 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:50:00+00:00"
+}, {
+  "event_id": "d23cf378-0481-4d50-8ad8-04b118a2887a",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:55:03.524812 UTC",
+  "processed_at": "2026-03-18 14:55:03.532232 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:50:00+00:00"
+}, {
+  "event_id": "2dd2d35d-07ac-458d-a5ee-c2e69246a61a",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 15:00:08.492756 UTC",
+  "processed_at": "2026-03-18 15:00:08.497656 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:55:00+00:00"
+}, {
+  "event_id": "6d7310e7-43ad-40c3-9454-05b5b0aaea2b",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 15:00:08.492756 UTC",
+  "processed_at": "2026-03-18 15:00:08.499677 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:55:00+00:00"
+}, {
+  "event_id": "5eefd118-1e1f-4f56-8434-0d7c10235b65",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 15:00:08.492756 UTC",
+  "processed_at": "2026-03-18 15:00:08.499895 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:55:00+00:00"
+}, {
+  "event_id": "0e346094-ef13-45d0-af09-2d963d8aad6b",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 15:00:08.492756 UTC",
+  "processed_at": "2026-03-18 15:00:08.500089 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T14:55:00+00:00"
+}, {
+  "event_id": "faf2efaa-d334-4d23-9b21-737d71f5dc3f",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:15:02.846066 UTC",
+  "processed_at": "2026-03-18 13:15:02.854059 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:10:00+00:00"
+}, {
+  "event_id": "62bca694-d519-42d7-98b7-a5018adb8e53",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:05:02.883155 UTC",
+  "processed_at": "2026-03-18 10:05:02.891032 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:00:00+00:00"
+}, {
+  "event_id": "d677e633-885a-4601-bcc4-b44adf864d8c",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:50:03.035460 UTC",
+  "processed_at": "2026-03-18 10:50:03.041586 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:45:00+00:00"
+}, {
+  "event_id": "f113a8fa-e726-47cf-8d83-f6857e7f52f2",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:10:02.861873 UTC",
+  "processed_at": "2026-03-18 13:10:02.868411 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:05:00+00:00"
+}, {
+  "event_id": "340298cd-9413-4749-a4bd-0b55e8562597",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:05:03.826404 UTC",
+  "processed_at": "2026-03-18 11:05:03.833272 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:00:00+00:00"
+}, {
+  "event_id": "16d73b42-4d8c-4bf7-8ffe-d26bcc454ce8",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:55:03.887051 UTC",
+  "processed_at": "2026-03-18 11:55:03.895032 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:50:00+00:00"
+}, {
+  "event_id": "a1d7efc0-d291-4720-8594-2cee33f06894",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:25:02.734818 UTC",
+  "processed_at": "2026-03-18 09:25:02.743130 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:20:00+00:00"
+}, {
+  "event_id": "2c895716-449e-46e7-a185-63f2766d9b86",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:50:03.394828 UTC",
+  "processed_at": "2026-03-18 12:50:03.402654 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:45:00+00:00"
+}, {
+  "event_id": "82a2c5e1-dbbf-402b-b989-4c4172eb1c94",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:40:03.099242 UTC",
+  "processed_at": "2026-03-18 12:40:03.106497 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:35:00+00:00"
+}, {
+  "event_id": "455a3e40-1232-42ea-8645-b9a03876147e",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:05:03.278194 UTC",
+  "processed_at": "2026-03-18 09:05:03.286011 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:00:00+00:00"
+}, {
+  "event_id": "ca8ac4cb-d538-475a-9094-0f8a900d76ed",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:50:03.051355 UTC",
+  "processed_at": "2026-03-18 13:50:03.058972 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:45:00+00:00"
+}, {
+  "event_id": "83cace9e-23b5-42f3-90c6-fa45ff0943a9",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:40:02.896106 UTC",
+  "processed_at": "2026-03-18 11:40:02.904050 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:35:00+00:00"
+}, {
+  "event_id": "d1b1c393-1ac6-4f26-af16-b56398ad769f",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:10:03.791245 UTC",
+  "processed_at": "2026-03-18 11:10:03.797927 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:05:00+00:00"
+}, {
+  "event_id": "295ce8f4-0081-4b91-baab-192d926cca76",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:35:03.058075 UTC",
+  "processed_at": "2026-03-18 09:35:03.066281 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:30:00+00:00"
+}, {
+  "event_id": "10326a92-bdbb-42f9-a841-b829af88dcee",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:50:03.432332 UTC",
+  "processed_at": "2026-03-18 09:50:03.439539 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:45:00+00:00"
+}, {
+  "event_id": "456fa53f-d40f-47ee-8fa9-d44581c49e11",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:30:08.503957 UTC",
+  "processed_at": "2026-03-18 13:30:08.510808 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:25:00+00:00"
+}, {
+  "event_id": "2c319d05-7246-428f-bcb9-2b716ec26171",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:55:03.411527 UTC",
+  "processed_at": "2026-03-18 12:55:03.419172 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:50:00+00:00"
+}, {
+  "event_id": "c220d837-ca23-469b-8251-3abebe5f806c",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:45:02.780188 UTC",
+  "processed_at": "2026-03-18 11:45:02.788657 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:40:00+00:00"
+}, {
+  "event_id": "f1245adb-596f-40ce-a5df-ca33b8618f56",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:10:03.405192 UTC",
+  "processed_at": "2026-03-18 09:10:03.413874 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:05:00+00:00"
+}, {
+  "event_id": "a75b6bfc-036c-45e6-b718-b42e28177299",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:55:03.085964 UTC",
+  "processed_at": "2026-03-18 10:55:03.093105 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:50:00+00:00"
+}, {
+  "event_id": "f2d27959-c16d-4ada-90e5-8aa54f981876",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:30:08.215008 UTC",
+  "processed_at": "2026-03-18 11:30:08.223032 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:25:00+00:00"
+}, {
+  "event_id": "fc0856bc-eaee-4350-ada0-b6841c29768e",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:55:03.030468 UTC",
+  "processed_at": "2026-03-18 09:55:03.038192 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:50:00+00:00"
+}, {
+  "event_id": "44ce0e7d-d398-494d-ae8f-76d09915cfb4",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:15:03.207003 UTC",
+  "processed_at": "2026-03-18 12:15:03.214138 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:10:00+00:00"
+}, {
+  "event_id": "753e28ce-af4a-4c9d-af02-146e80d34589",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:40:03.056770 UTC",
+  "processed_at": "2026-03-18 10:40:03.064399 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:35:00+00:00"
+}, {
+  "event_id": "ad818423-4872-4df9-8248-c377eef5830b",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:45:03.725580 UTC",
+  "processed_at": "2026-03-18 09:45:03.733271 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:40:00+00:00"
+}, {
+  "event_id": "87e3b4cf-721c-41e7-9172-7afcf16ac495",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:20:03.296852 UTC",
+  "processed_at": "2026-03-18 09:20:03.306286 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:15:00+00:00"
+}, {
+  "event_id": "7a5b309a-9661-4ae6-8e1c-d7aae5ac7e10",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:45:03.070594 UTC",
+  "processed_at": "2026-03-18 12:45:03.077740 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:40:00+00:00"
+}, {
+  "event_id": "4c620f04-e6bb-43a3-8adc-f777bdbf994f",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:40:03.404834 UTC",
+  "processed_at": "2026-03-18 13:40:03.412636 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:35:00+00:00"
+}, {
+  "event_id": "fbb63ff3-5c09-4442-a071-3ddf317e4f83",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:25:03.492997 UTC",
+  "processed_at": "2026-03-18 10:25:03.500032 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:20:00+00:00"
+}, {
+  "event_id": "596997e4-741d-4e55-9bb8-7772f7748426",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:00:07.638623 UTC",
+  "processed_at": "2026-03-18 11:00:07.646387 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:55:00+00:00"
+}, {
+  "event_id": "9416322e-a044-458f-906a-6a5ae3f64fa6",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:10:03.612610 UTC",
+  "processed_at": "2026-03-18 10:10:03.619470 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:05:00+00:00"
+}, {
+  "event_id": "5769fc24-0da7-4504-a7c6-d5d85ccaa5c8",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:20:03.567387 UTC",
+  "processed_at": "2026-03-18 10:20:03.574043 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:15:00+00:00"
+}, {
+  "event_id": "b2512e00-7d1e-445e-940c-051b394ce7c2",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:35:03.138375 UTC",
+  "processed_at": "2026-03-18 12:35:03.146746 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:30:00+00:00"
+}, {
+  "event_id": "433c6822-9eee-4523-be8d-0a719042d539",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:35:03.092850 UTC",
+  "processed_at": "2026-03-18 10:35:03.101058 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:30:00+00:00"
+}, {
+  "event_id": "bd745a48-0dc4-4883-ad95-f81c43a3cbad",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:00:08.675622 UTC",
+  "processed_at": "2026-03-18 10:00:08.684301 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:55:00+00:00"
+}, {
+  "event_id": "7d0033ee-c026-447f-b6b9-27bba196f8d7",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:30:07.986379 UTC",
+  "processed_at": "2026-03-18 12:30:07.993862 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:25:00+00:00"
+}, {
+  "event_id": "39bc1f91-575e-404b-a8cc-244f1ba6b5c7",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:15:03.597569 UTC",
+  "processed_at": "2026-03-18 09:15:03.607263 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:10:00+00:00"
+}, {
+  "event_id": "97f00fbc-77f9-446f-8387-806a33e82256",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:15:03.317065 UTC",
+  "processed_at": "2026-03-18 10:15:03.324450 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:10:00+00:00"
+}, {
+  "event_id": "54b85e8c-6c40-4867-8a7d-4df0b0171014",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:25:03.791083 UTC",
+  "processed_at": "2026-03-18 13:25:03.797923 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:20:00+00:00"
+}, {
+  "event_id": "563df9b1-3ba4-4ccd-8627-770069326636",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:55:03.006041 UTC",
+  "processed_at": "2026-03-18 13:55:03.015488 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:50:00+00:00"
+}, {
+  "event_id": "304d8350-46d4-4bc0-b383-b4dd137a35c5",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:00:08.333628 UTC",
+  "processed_at": "2026-03-18 12:00:08.349983 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:55:00+00:00"
+}, {
+  "event_id": "5eed526f-802c-4075-8364-d24bce93dea9",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:30:07.922132 UTC",
+  "processed_at": "2026-03-18 10:30:07.929965 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:25:00+00:00"
+}, {
+  "event_id": "e04480a0-4aa6-4dd6-b918-9694521585a7",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:35:03.527486 UTC",
+  "processed_at": "2026-03-18 13:35:03.536110 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:30:00+00:00"
+}, {
+  "event_id": "13331c57-420a-4fab-9dd4-2c6abaa6c07c",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:45:02.927743 UTC",
+  "processed_at": "2026-03-18 13:45:02.936339 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:40:00+00:00"
+}, {
+  "event_id": "f2b1df06-428b-4224-947a-526258e38150",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:40:02.918167 UTC",
+  "processed_at": "2026-03-18 09:40:02.926132 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:35:00+00:00"
+}, {
+  "event_id": "0ff0f64e-6680-4760-a507-aca3e0558f53",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:00:08.724573 UTC",
+  "processed_at": "2026-03-18 14:00:08.734263 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:55:00+00:00"
+}, {
+  "event_id": "cd9dfce2-7d66-4eee-9baa-78fd3d503e1d",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:05:02.865240 UTC",
+  "processed_at": "2026-03-18 13:05:02.873316 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:00:00+00:00"
+}, {
+  "event_id": "ef90d2bc-4b55-4cb0-adaf-e66c02e713be",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:50:02.740095 UTC",
+  "processed_at": "2026-03-18 11:50:02.747382 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:45:00+00:00"
+}, {
+  "event_id": "ccf703a8-d335-4b14-a45f-bfa4a96d9dc6",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:25:03.629932 UTC",
+  "processed_at": "2026-03-18 11:25:03.638038 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:20:00+00:00"
+}, {
+  "event_id": "dafc7c47-9cf2-4f47-a83b-bf5f8604f9f2",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:30:08.330514 UTC",
+  "processed_at": "2026-03-18 09:30:08.338023 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:25:00+00:00"
+}, {
+  "event_id": "76ddd8df-8b39-4127-b807-8891a1ad8bf1",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:00:07.906169 UTC",
+  "processed_at": "2026-03-18 13:00:07.913402 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:55:00+00:00"
+}, {
+  "event_id": "dfc7a42e-6876-4b51-b582-eaeb39c5d47f",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:20:04.261927 UTC",
+  "processed_at": "2026-03-18 11:20:04.270361 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:15:00+00:00"
+}, {
+  "event_id": "426bf277-d975-4734-8032-96684818794b",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:05:03.398070 UTC",
+  "processed_at": "2026-03-18 12:05:03.406152 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:00:00+00:00"
+}, {
+  "event_id": "17e2a047-39e7-4f46-b19a-52ddaad4f207",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:10:03.270478 UTC",
+  "processed_at": "2026-03-18 12:10:03.278284 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:05:00+00:00"
+}, {
+  "event_id": "20a3c606-3085-471d-bc0c-4da74906f70a",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:15:03.925725 UTC",
+  "processed_at": "2026-03-18 11:15:03.933637 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:10:00+00:00"
+}, {
+  "event_id": "6e560555-34f5-4e24-a8ba-f4e800cde97f",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:01:22.108765 UTC",
+  "processed_at": "2026-03-18 09:01:22.124389 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T08:55:00+00:00"
+}, {
+  "event_id": "d6e273c3-054e-4d9f-8c74-0a576038f064",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:35:03.041263 UTC",
+  "processed_at": "2026-03-18 11:35:03.051052 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:30:00+00:00"
+}, {
+  "event_id": "796ad7c1-92b8-4619-bb86-326081f6442a",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:20:02.677310 UTC",
+  "processed_at": "2026-03-18 13:20:02.696195 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:15:00+00:00"
+}, {
+  "event_id": "16ad9d51-f5df-4a64-b9e1-17722879915b",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:20:03.272322 UTC",
+  "processed_at": "2026-03-18 12:20:03.279920 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:15:00+00:00"
+}, {
+  "event_id": "334c4f36-14a9-4393-a19b-7cb620e01c30",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:25:02.918636 UTC",
+  "processed_at": "2026-03-18 12:25:02.926282 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:20:00+00:00"
+}, {
+  "event_id": "0daea493-8392-4646-bfe2-caead58b1f4c",
+  "metal": "XAG",
+  "price_usd": "80.7080589031",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:45:03.273780 UTC",
+  "processed_at": "2026-03-18 10:45:03.280387 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:40:00+00:00"
+}, {
+  "event_id": "45fdba34-526f-4501-8247-f8dca2c50d60",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:00:07.638623 UTC",
+  "processed_at": "2026-03-18 11:00:07.646812 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:55:00+00:00"
+}, {
+  "event_id": "135447ae-ff11-494b-9e89-9d53cdfd7f42",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:55:03.887051 UTC",
+  "processed_at": "2026-03-18 11:55:03.895362 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:50:00+00:00"
+}, {
+  "event_id": "13f929a4-27d0-4173-93a4-ac2fe8d7aeeb",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:20:03.296852 UTC",
+  "processed_at": "2026-03-18 09:20:03.306596 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:15:00+00:00"
+}, {
+  "event_id": "f828d006-8f57-43aa-a012-0baa9acc36bf",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:45:02.927743 UTC",
+  "processed_at": "2026-03-18 13:45:02.936761 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:40:00+00:00"
+}, {
+  "event_id": "ab4681e0-d8b8-45e3-acf2-9e8648dbc9ba",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:35:03.527486 UTC",
+  "processed_at": "2026-03-18 13:35:03.536548 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:30:00+00:00"
+}, {
+  "event_id": "f2d805f1-89c9-466a-9184-5c2a9643ff7b",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:05:03.278194 UTC",
+  "processed_at": "2026-03-18 09:05:03.288643 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:00:00+00:00"
+}, {
+  "event_id": "095336c1-c70b-47b7-be21-69be79b12587",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:05:03.826404 UTC",
+  "processed_at": "2026-03-18 11:05:03.835462 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:00:00+00:00"
+}, {
+  "event_id": "70181ace-0678-458d-b784-5ce24cf14b9f",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:55:03.006041 UTC",
+  "processed_at": "2026-03-18 13:55:03.015901 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:50:00+00:00"
+}, {
+  "event_id": "05cb5f32-a23d-4a81-930a-54a8c73f0a39",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:20:03.272322 UTC",
+  "processed_at": "2026-03-18 12:20:03.280229 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:15:00+00:00"
+}, {
+  "event_id": "56a89377-6f43-4ac2-9352-56777af61446",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:55:03.085964 UTC",
+  "processed_at": "2026-03-18 10:55:03.093474 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:50:00+00:00"
+}, {
+  "event_id": "fb855e7b-f295-4c82-b6ba-4d0187b06074",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:45:02.780188 UTC",
+  "processed_at": "2026-03-18 11:45:02.789101 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:40:00+00:00"
+}, {
+  "event_id": "14d30f4d-ff98-45de-8862-b12716467518",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:35:03.058075 UTC",
+  "processed_at": "2026-03-18 09:35:03.066609 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:30:00+00:00"
+}, {
+  "event_id": "95c344bb-b980-4efc-b372-42198ff7a23d",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:20:03.567387 UTC",
+  "processed_at": "2026-03-18 10:20:03.575952 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:15:00+00:00"
+}, {
+  "event_id": "ab3c8aa7-60a9-432d-a5cb-c6281c73e152",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:30:08.215008 UTC",
+  "processed_at": "2026-03-18 11:30:08.223358 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:25:00+00:00"
+}, {
+  "event_id": "9fb372fe-8b1f-4700-84ee-c4c5a8d853ee",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:40:02.918167 UTC",
+  "processed_at": "2026-03-18 09:40:02.926559 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:35:00+00:00"
+}, {
+  "event_id": "8080aa36-f47b-4083-b70e-115c57f8edbd",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:00:08.675622 UTC",
+  "processed_at": "2026-03-18 10:00:08.684654 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:55:00+00:00"
+}, {
+  "event_id": "be5bfec2-d957-4c83-8354-9b2a9682d4b9",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:40:03.404834 UTC",
+  "processed_at": "2026-03-18 13:40:03.413107 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:35:00+00:00"
+}, {
+  "event_id": "da48856e-31fe-4b4e-a90c-ba1406854767",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:10:02.861873 UTC",
+  "processed_at": "2026-03-18 13:10:02.870699 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:05:00+00:00"
+}, {
+  "event_id": "e76d09c2-30b7-4d2b-af7d-b9a5da44d947",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:20:02.677310 UTC",
+  "processed_at": "2026-03-18 13:20:02.696651 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:15:00+00:00"
+}, {
+  "event_id": "e5a9846d-b408-4d1e-a15d-2fbcf8a74efe",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:40:03.056770 UTC",
+  "processed_at": "2026-03-18 10:40:03.064856 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:35:00+00:00"
+}, {
+  "event_id": "4bcee303-e402-4f7a-bcd6-561ad8b47a61",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:25:03.791083 UTC",
+  "processed_at": "2026-03-18 13:25:03.799729 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:20:00+00:00"
+}, {
+  "event_id": "a35cd286-da1f-444f-8c6a-274572666b26",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:15:03.925725 UTC",
+  "processed_at": "2026-03-18 11:15:03.933991 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:10:00+00:00"
+}, {
+  "event_id": "13ee0346-2092-4993-9bca-1e125e0522a0",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:00:08.724573 UTC",
+  "processed_at": "2026-03-18 14:00:08.734721 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:55:00+00:00"
+}, {
+  "event_id": "a173dcb6-da55-4005-bdd6-f896a8188c30",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:05:02.883155 UTC",
+  "processed_at": "2026-03-18 10:05:02.891562 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:00:00+00:00"
+}, {
+  "event_id": "bdac8e1a-2b67-43b7-9a30-93b862908b22",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:10:03.791245 UTC",
+  "processed_at": "2026-03-18 11:10:03.798426 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:05:00+00:00"
+}, {
+  "event_id": "220da14c-5eee-4836-aded-24bf9df04751",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:10:03.405192 UTC",
+  "processed_at": "2026-03-18 09:10:03.416193 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:05:00+00:00"
+}, {
+  "event_id": "976dd727-d645-4cc2-aac6-0a6726ba9009",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:50:03.432332 UTC",
+  "processed_at": "2026-03-18 09:50:03.441943 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:45:00+00:00"
+}, {
+  "event_id": "246b74d6-a294-47c3-8002-f99c7214491b",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:00:07.906169 UTC",
+  "processed_at": "2026-03-18 13:00:07.913935 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:55:00+00:00"
+}, {
+  "event_id": "639d818b-05d0-4a49-9cea-7517e1e015f0",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:30:07.922132 UTC",
+  "processed_at": "2026-03-18 10:30:07.930407 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:25:00+00:00"
+}, {
+  "event_id": "a9dad169-6326-448d-8676-dce152a0c291",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:50:02.740095 UTC",
+  "processed_at": "2026-03-18 11:50:02.747756 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:45:00+00:00"
+}, {
+  "event_id": "0287b47d-9fde-4cf1-aef4-1d80a324d7d1",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:15:03.597569 UTC",
+  "processed_at": "2026-03-18 09:15:03.607661 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:10:00+00:00"
+}, {
+  "event_id": "3f4b7790-98e8-4468-b6dd-23eef23cd2aa",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:15:03.317065 UTC",
+  "processed_at": "2026-03-18 10:15:03.324876 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:10:00+00:00"
+}, {
+  "event_id": "c25463b0-130a-4de1-bff0-7bebc39982ec",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:05:03.398070 UTC",
+  "processed_at": "2026-03-18 12:05:03.406676 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:00:00+00:00"
+}, {
+  "event_id": "f0a9300d-b602-482d-828a-77112c76f187",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:15:02.846066 UTC",
+  "processed_at": "2026-03-18 13:15:02.854449 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:10:00+00:00"
+}, {
+  "event_id": "57e49ea4-b404-4a27-8c45-200c09a15247",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:40:02.896106 UTC",
+  "processed_at": "2026-03-18 11:40:02.904401 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:35:00+00:00"
+}, {
+  "event_id": "947c6b56-307e-4997-8672-bcd5eaa1a934",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:25:02.734818 UTC",
+  "processed_at": "2026-03-18 09:25:02.743649 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:20:00+00:00"
+}, {
+  "event_id": "07be02da-ee59-479f-858a-7ac1f2a35a69",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:25:03.629932 UTC",
+  "processed_at": "2026-03-18 11:25:03.638410 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:20:00+00:00"
+}, {
+  "event_id": "0f8e7100-8be6-4efa-9702-5541b0102343",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:00:08.333628 UTC",
+  "processed_at": "2026-03-18 12:00:08.350383 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:55:00+00:00"
+}, {
+  "event_id": "e9d4536f-8b85-430b-9e7e-2c172ecd9f72",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:50:03.035460 UTC",
+  "processed_at": "2026-03-18 10:50:03.044076 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:45:00+00:00"
+}, {
+  "event_id": "77410e92-501e-4fb0-bcf8-7636b73d70d3",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:35:03.041263 UTC",
+  "processed_at": "2026-03-18 11:35:03.053003 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:30:00+00:00"
+}, {
+  "event_id": "b7e8b67e-9733-4244-b1ed-0e15f3dc6ce6",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:30:08.503957 UTC",
+  "processed_at": "2026-03-18 13:30:08.512454 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:25:00+00:00"
+}, {
+  "event_id": "dbef2eaa-858b-4213-af21-54b4f0a8c69b",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:40:03.099242 UTC",
+  "processed_at": "2026-03-18 12:40:03.106962 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:35:00+00:00"
+}, {
+  "event_id": "80c0f3bd-fef7-43c3-8c69-24988298b44f",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:45:03.725580 UTC",
+  "processed_at": "2026-03-18 09:45:03.733619 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:40:00+00:00"
+}, {
+  "event_id": "272ef341-b01b-415b-9335-1d31205ac3b7",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:55:03.030468 UTC",
+  "processed_at": "2026-03-18 09:55:03.038719 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:50:00+00:00"
+}, {
+  "event_id": "5ea978d1-096d-480e-91a5-87a1db5c4bba",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:05:02.865240 UTC",
+  "processed_at": "2026-03-18 13:05:02.873785 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:00:00+00:00"
+}, {
+  "event_id": "b42b0099-febf-4f6d-a86a-593807f0a991",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:50:03.394828 UTC",
+  "processed_at": "2026-03-18 12:50:03.402982 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:45:00+00:00"
+}, {
+  "event_id": "8632a0dc-0e6b-4841-9baa-0e80226eaec1",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:01:22.108765 UTC",
+  "processed_at": "2026-03-18 09:01:22.124736 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T08:55:00+00:00"
+}, {
+  "event_id": "cc6c9ca2-4371-4b22-8660-8f330b08d8aa",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:50:03.051355 UTC",
+  "processed_at": "2026-03-18 13:50:03.059410 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:45:00+00:00"
+}, {
+  "event_id": "e690aa15-fd15-4738-a6a8-cb3c98fde366",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:30:08.330514 UTC",
+  "processed_at": "2026-03-18 09:30:08.338375 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:25:00+00:00"
+}, {
+  "event_id": "2784794a-7da8-4415-9fe6-ca6b5b327708",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:45:03.070594 UTC",
+  "processed_at": "2026-03-18 12:45:03.079831 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:40:00+00:00"
+}, {
+  "event_id": "92fddf96-ad31-4f19-b24f-cc9fa862d6f3",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:30:07.986379 UTC",
+  "processed_at": "2026-03-18 12:30:07.996491 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:25:00+00:00"
+}, {
+  "event_id": "1e1ce4b5-499f-41f9-aa7f-fe55e5380119",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:45:03.273780 UTC",
+  "processed_at": "2026-03-18 10:45:03.280707 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:40:00+00:00"
+}, {
+  "event_id": "68309054-004c-4be1-bae8-611c203bb6eb",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:25:03.492997 UTC",
+  "processed_at": "2026-03-18 10:25:03.500428 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:20:00+00:00"
+}, {
+  "event_id": "2de98bbb-b122-42c2-ab3a-1398542a4794",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:15:03.207003 UTC",
+  "processed_at": "2026-03-18 12:15:03.215881 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:10:00+00:00"
+}, {
+  "event_id": "34e9b109-e6aa-4583-9554-e8b266d118c1",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:10:03.270478 UTC",
+  "processed_at": "2026-03-18 12:10:03.278659 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:05:00+00:00"
+}, {
+  "event_id": "4df00814-f27a-436b-9a6b-5f0806a92337",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:35:03.138375 UTC",
+  "processed_at": "2026-03-18 12:35:03.147115 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:30:00+00:00"
+}, {
+  "event_id": "ebe11a2e-a6d5-4e34-8a77-7134de1cb3b5",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:20:04.261927 UTC",
+  "processed_at": "2026-03-18 11:20:04.270655 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:15:00+00:00"
+}, {
+  "event_id": "cd528e08-b680-46d3-ba06-867b0694e53b",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:35:03.092850 UTC",
+  "processed_at": "2026-03-18 10:35:03.101449 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:30:00+00:00"
+}, {
+  "event_id": "d2ce7f85-c3b3-4c74-9398-c991f1a3f4d9",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:25:02.918636 UTC",
+  "processed_at": "2026-03-18 12:25:02.926647 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:20:00+00:00"
+}, {
+  "event_id": "e7088990-0390-4e7a-a853-96a4b47b0ec0",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:55:03.411527 UTC",
+  "processed_at": "2026-03-18 12:55:03.419575 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:50:00+00:00"
+}, {
+  "event_id": "45dc05d5-cf84-4b1a-bd10-459ae82dcd22",
+  "metal": "XPD",
+  "price_usd": "1603.5043625741",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:10:03.612610 UTC",
+  "processed_at": "2026-03-18 10:10:03.621660 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:05:00+00:00"
+}, {
+  "event_id": "2a5d405e-54dc-4eda-8c36-ec2d54d42901",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:50:03.432332 UTC",
+  "processed_at": "2026-03-18 09:50:03.441652 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:45:00+00:00"
+}, {
+  "event_id": "b3d0679f-714b-4a6d-a6d5-ec666266340c",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:50:03.035460 UTC",
+  "processed_at": "2026-03-18 10:50:03.043808 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:45:00+00:00"
+}, {
+  "event_id": "03ea40b0-eece-42ae-b93e-00982eb76b0b",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:00:08.675622 UTC",
+  "processed_at": "2026-03-18 10:00:08.684497 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:55:00+00:00"
+}, {
+  "event_id": "bdc65170-031b-4336-90c1-a76282d1a0ed",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:15:03.317065 UTC",
+  "processed_at": "2026-03-18 10:15:03.324699 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:10:00+00:00"
+}, {
+  "event_id": "65dba874-817e-43a7-bbb4-7bef136f2f26",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:20:03.567387 UTC",
+  "processed_at": "2026-03-18 10:20:03.574168 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:15:00+00:00"
+}, {
+  "event_id": "0c09634f-6434-4155-a881-d179d88ab3d7",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:20:02.677310 UTC",
+  "processed_at": "2026-03-18 13:20:02.696460 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:15:00+00:00"
+}, {
+  "event_id": "4a39e332-cd2e-4448-a0d5-4211ba6744bd",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:15:02.846066 UTC",
+  "processed_at": "2026-03-18 13:15:02.854278 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:10:00+00:00"
+}, {
+  "event_id": "14c07fb8-21c4-4034-b318-c60efcbdab6e",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:40:03.404834 UTC",
+  "processed_at": "2026-03-18 13:40:03.412934 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:35:00+00:00"
+}, {
+  "event_id": "ea1bff8e-147c-49c5-86e3-e82d61b5d93e",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:35:03.058075 UTC",
+  "processed_at": "2026-03-18 09:35:03.066475 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:30:00+00:00"
+}, {
+  "event_id": "3bcd5640-6b02-44d6-8f84-362f15c0147f",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:55:03.006041 UTC",
+  "processed_at": "2026-03-18 13:55:03.015731 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:50:00+00:00"
+}, {
+  "event_id": "3170691c-723d-4a50-9612-74fb76295470",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:45:03.725580 UTC",
+  "processed_at": "2026-03-18 09:45:03.733477 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:40:00+00:00"
+}, {
+  "event_id": "01ef73de-d721-493c-824b-20a6cc7384f3",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:05:02.865240 UTC",
+  "processed_at": "2026-03-18 13:05:02.873600 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:00:00+00:00"
+}, {
+  "event_id": "d8775bbd-6cc6-4dc4-8b06-b619c90f7f43",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:35:03.527486 UTC",
+  "processed_at": "2026-03-18 13:35:03.536355 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:30:00+00:00"
+}, {
+  "event_id": "f75317d5-a866-4244-859f-95061f38f52c",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:40:02.896106 UTC",
+  "processed_at": "2026-03-18 11:40:02.904262 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:35:00+00:00"
+}, {
+  "event_id": "5c236808-c04b-4f4c-a063-aded5641657e",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:30:07.922132 UTC",
+  "processed_at": "2026-03-18 10:30:07.930220 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:25:00+00:00"
+}, {
+  "event_id": "7b635e16-58db-4ec8-856c-f9e662535d25",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:55:03.030468 UTC",
+  "processed_at": "2026-03-18 09:55:03.038521 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:50:00+00:00"
+}, {
+  "event_id": "39ab84f3-4c1c-4fd0-8970-b37258417a37",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:40:03.099242 UTC",
+  "processed_at": "2026-03-18 12:40:03.106751 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:35:00+00:00"
+}, {
+  "event_id": "b88da2b2-2602-4272-8edf-6d1df47c2822",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:40:03.056770 UTC",
+  "processed_at": "2026-03-18 10:40:03.064633 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:35:00+00:00"
+}, {
+  "event_id": "bfc899d5-ee85-43be-a732-70723b5fd0af",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:15:03.925725 UTC",
+  "processed_at": "2026-03-18 11:15:03.933852 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:10:00+00:00"
+}, {
+  "event_id": "fe19f75e-4c57-46a7-ae4a-b950bea682d8",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:55:03.887051 UTC",
+  "processed_at": "2026-03-18 11:55:03.895206 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:50:00+00:00"
+}, {
+  "event_id": "6973fc65-d3e5-4e54-a038-5479dbe24c09",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:55:03.411527 UTC",
+  "processed_at": "2026-03-18 12:55:03.419415 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:50:00+00:00"
+}, {
+  "event_id": "878521f4-9244-48f5-ab82-46c3e8258c24",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:35:03.041263 UTC",
+  "processed_at": "2026-03-18 11:35:03.051291 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:30:00+00:00"
+}, {
+  "event_id": "3288595f-0f6d-48e5-8709-5127e917511d",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:50:03.394828 UTC",
+  "processed_at": "2026-03-18 12:50:03.402842 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:45:00+00:00"
+}, {
+  "event_id": "d4d9bbd6-47c3-4966-9392-0cdd4a8c3825",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:30:07.986379 UTC",
+  "processed_at": "2026-03-18 12:30:07.994198 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:25:00+00:00"
+}, {
+  "event_id": "a92bb07d-536b-491a-b396-abc81dcac6e0",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:25:03.791083 UTC",
+  "processed_at": "2026-03-18 13:25:03.798096 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:20:00+00:00"
+}, {
+  "event_id": "972fabe6-194d-49c0-a2e0-c486782f09c6",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:25:02.918636 UTC",
+  "processed_at": "2026-03-18 12:25:02.926481 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:20:00+00:00"
+}, {
+  "event_id": "2cf9a0f3-3941-422d-9abb-f793b6cb8b35",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:20:04.261927 UTC",
+  "processed_at": "2026-03-18 11:20:04.270557 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:15:00+00:00"
+}, {
+  "event_id": "14df54a7-a901-4dca-bfdd-e94bdc450f03",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:25:02.734818 UTC",
+  "processed_at": "2026-03-18 09:25:02.743424 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:20:00+00:00"
+}, {
+  "event_id": "b0fee283-ff11-4149-86f4-6efd345a4583",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:35:03.092850 UTC",
+  "processed_at": "2026-03-18 10:35:03.101280 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:30:00+00:00"
+}, {
+  "event_id": "e8209f8a-4f59-4d04-87cc-70b42da34544",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:05:03.398070 UTC",
+  "processed_at": "2026-03-18 12:05:03.406446 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:00:00+00:00"
+}, {
+  "event_id": "0eb44199-7578-4aa6-972d-904974652524",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:05:03.278194 UTC",
+  "processed_at": "2026-03-18 09:05:03.288412 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:00:00+00:00"
+}, {
+  "event_id": "379ca17c-3e69-4216-8aa4-b29136584544",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:45:02.780188 UTC",
+  "processed_at": "2026-03-18 11:45:02.788910 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:40:00+00:00"
+}, {
+  "event_id": "8731d71a-2ae5-4279-8965-2c75c1ba4c6d",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:30:08.503957 UTC",
+  "processed_at": "2026-03-18 13:30:08.511019 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:25:00+00:00"
+}, {
+  "event_id": "17ab90d9-a932-43b7-91a4-a3b961c444c7",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:45:02.927743 UTC",
+  "processed_at": "2026-03-18 13:45:02.936546 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:40:00+00:00"
+}, {
+  "event_id": "52aa20a8-cf7a-4d6f-b93b-0b6ae2fd8733",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:00:07.638623 UTC",
+  "processed_at": "2026-03-18 11:00:07.646621 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:55:00+00:00"
+}, {
+  "event_id": "74b89765-49c1-49a4-a32d-b66cf5e6488b",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:20:03.296852 UTC",
+  "processed_at": "2026-03-18 09:20:03.306489 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:15:00+00:00"
+}, {
+  "event_id": "6edd7b00-a989-45bf-9d03-92a94bcd71bc",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:45:03.070594 UTC",
+  "processed_at": "2026-03-18 12:45:03.079617 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:40:00+00:00"
+}, {
+  "event_id": "8978fd43-3d7f-41ea-897a-b5aeb664a03f",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:10:03.612610 UTC",
+  "processed_at": "2026-03-18 10:10:03.621436 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:05:00+00:00"
+}, {
+  "event_id": "7f3c8893-5207-4259-9b42-3bbf414e6125",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:20:03.272322 UTC",
+  "processed_at": "2026-03-18 12:20:03.280130 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:15:00+00:00"
+}, {
+  "event_id": "606de2e5-f0fd-447e-9bb3-8d45091aa4c7",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:05:02.883155 UTC",
+  "processed_at": "2026-03-18 10:05:02.891250 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:00:00+00:00"
+}, {
+  "event_id": "edaee32f-d60c-4af0-ae8b-5b48d71884b6",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:50:03.051355 UTC",
+  "processed_at": "2026-03-18 13:50:03.059246 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:45:00+00:00"
+}, {
+  "event_id": "cbaf3185-d291-4544-8aca-a04221634c94",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:10:03.791245 UTC",
+  "processed_at": "2026-03-18 11:10:03.798209 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:05:00+00:00"
+}, {
+  "event_id": "2058c8d6-6ad6-4414-bef5-c65e61ddf8dd",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:10:03.270478 UTC",
+  "processed_at": "2026-03-18 12:10:03.278544 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:05:00+00:00"
+}, {
+  "event_id": "90c99e99-5deb-48d7-bb29-82c1955c87b7",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:00:07.906169 UTC",
+  "processed_at": "2026-03-18 13:00:07.913757 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:55:00+00:00"
+}, {
+  "event_id": "4a6830c4-f81a-44f5-b456-1d3d520681ac",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:10:02.861873 UTC",
+  "processed_at": "2026-03-18 13:10:02.870501 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:05:00+00:00"
+}, {
+  "event_id": "6d6a1607-8b75-48a9-91f3-5cf645f4406d",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:01:22.108765 UTC",
+  "processed_at": "2026-03-18 09:01:22.124603 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T08:55:00+00:00"
+}, {
+  "event_id": "02cf242b-71fa-4625-b09d-7e4bfdbe0142",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:05:03.826404 UTC",
+  "processed_at": "2026-03-18 11:05:03.835270 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:00:00+00:00"
+}, {
+  "event_id": "8e755752-c154-46b9-9686-e89d36df7a66",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:15:03.207003 UTC",
+  "processed_at": "2026-03-18 12:15:03.214373 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:10:00+00:00"
+}, {
+  "event_id": "421dcb72-c791-4053-83b5-61375f7426be",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:30:08.215008 UTC",
+  "processed_at": "2026-03-18 11:30:08.223255 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:25:00+00:00"
+}, {
+  "event_id": "747c2cfd-3082-4488-b010-102c6419094a",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:25:03.629932 UTC",
+  "processed_at": "2026-03-18 11:25:03.638252 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:20:00+00:00"
+}, {
+  "event_id": "f4cf31ad-441f-4133-aa66-4c91348ffa70",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:30:08.330514 UTC",
+  "processed_at": "2026-03-18 09:30:08.338271 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:25:00+00:00"
+}, {
+  "event_id": "178d3974-09d9-44eb-bccd-ecffb45a9669",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:15:03.597569 UTC",
+  "processed_at": "2026-03-18 09:15:03.607490 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:10:00+00:00"
+}, {
+  "event_id": "8ad69cae-c877-476d-9985-d366e47458a5",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:10:03.405192 UTC",
+  "processed_at": "2026-03-18 09:10:03.414164 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:05:00+00:00"
+}, {
+  "event_id": "23ce8bf0-781e-4f28-9789-a5e5bc64303d",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:25:03.492997 UTC",
+  "processed_at": "2026-03-18 10:25:03.500251 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:20:00+00:00"
+}, {
+  "event_id": "c788b17b-2def-48b4-a74f-0df9111a553e",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:00:08.724573 UTC",
+  "processed_at": "2026-03-18 14:00:08.734503 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:55:00+00:00"
+}, {
+  "event_id": "dd4b50fb-6718-408b-9983-d2a31c723af1",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:45:03.273780 UTC",
+  "processed_at": "2026-03-18 10:45:03.280562 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:40:00+00:00"
+}, {
+  "event_id": "6458f112-a977-497a-adcd-1c02bae9cd8b",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:50:02.740095 UTC",
+  "processed_at": "2026-03-18 11:50:02.747587 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:45:00+00:00"
+}, {
+  "event_id": "b4d08ed3-1063-4103-b821-1fda9fb855df",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:00:08.333628 UTC",
+  "processed_at": "2026-03-18 12:00:08.350251 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:55:00+00:00"
+}, {
+  "event_id": "1e49aeac-5a78-473d-af22-d540488d8771",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:35:03.138375 UTC",
+  "processed_at": "2026-03-18 12:35:03.146962 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:30:00+00:00"
+}, {
+  "event_id": "37e0b2f6-eb12-4889-96cd-629f505f5d65",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:40:02.918167 UTC",
+  "processed_at": "2026-03-18 09:40:02.926368 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:35:00+00:00"
+}, {
+  "event_id": "90b1bb6a-c124-48e4-9086-73bd0fb629ec",
+  "metal": "XPT",
+  "price_usd": "2109.1995903934",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:55:03.085964 UTC",
+  "processed_at": "2026-03-18 10:55:03.093330 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:50:00+00:00"
+}, {
+  "event_id": "9643f7e9-93ba-479b-9447-f2df2234cd06",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:45:02.780188 UTC",
+  "processed_at": "2026-03-18 11:45:02.786640 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:40:00+00:00"
+}, {
+  "event_id": "1be04ffa-b69d-4ba4-9311-17ab855d8f38",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:30:08.503957 UTC",
+  "processed_at": "2026-03-18 13:30:08.509001 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:25:00+00:00"
+}, {
+  "event_id": "3f4cf13f-5c63-4834-a346-e9b786a49b37",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:10:03.612610 UTC",
+  "processed_at": "2026-03-18 10:10:03.619090 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:05:00+00:00"
+}, {
+  "event_id": "832dba81-b041-43bd-97cc-4e95eebd286c",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:45:02.927743 UTC",
+  "processed_at": "2026-03-18 13:45:02.933834 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:40:00+00:00"
+}, {
+  "event_id": "838753d3-c556-418d-8426-813c14f703b1",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:00:08.675622 UTC",
+  "processed_at": "2026-03-18 10:00:08.683884 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:55:00+00:00"
+}, {
+  "event_id": "6debf383-eaab-466d-9737-bab063d16554",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:10:02.861873 UTC",
+  "processed_at": "2026-03-18 13:10:02.868008 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:05:00+00:00"
+}, {
+  "event_id": "49bcf978-02ce-4c4e-a188-9ccc1a681184",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:05:03.398070 UTC",
+  "processed_at": "2026-03-18 12:05:03.403909 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:00:00+00:00"
+}, {
+  "event_id": "f18b1ec1-0d4e-4d3b-912f-4675360d359b",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:40:03.099242 UTC",
+  "processed_at": "2026-03-18 12:40:03.104460 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:35:00+00:00"
+}, {
+  "event_id": "d99f56ff-f5ba-4e4f-90f9-8047b5988bf4",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:10:03.270478 UTC",
+  "processed_at": "2026-03-18 12:10:03.276151 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:05:00+00:00"
+}, {
+  "event_id": "bb66f454-69d7-4458-ac56-eb46ab78bc98",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:50:02.740095 UTC",
+  "processed_at": "2026-03-18 11:50:02.745215 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:45:00+00:00"
+}, {
+  "event_id": "872c0af8-cf65-4bfa-be71-7b4cf5efd290",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:15:03.207003 UTC",
+  "processed_at": "2026-03-18 12:15:03.212381 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:10:00+00:00"
+}, {
+  "event_id": "d057d4ec-49d7-4223-99d2-e0c895f1e101",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:25:03.629932 UTC",
+  "processed_at": "2026-03-18 11:25:03.636118 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:20:00+00:00"
+}, {
+  "event_id": "15fd4c62-bf65-48bb-a8f2-cffb99d0d5c7",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:35:03.058075 UTC",
+  "processed_at": "2026-03-18 09:35:03.064353 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:30:00+00:00"
+}, {
+  "event_id": "e89f851f-ddde-4120-9c37-1fbcb2cc2e34",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:55:03.411527 UTC",
+  "processed_at": "2026-03-18 12:55:03.416846 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:50:00+00:00"
+}, {
+  "event_id": "95bc7232-0f46-46d6-bc4f-ba0f8a08d05d",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:25:03.492997 UTC",
+  "processed_at": "2026-03-18 10:25:03.497731 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:20:00+00:00"
+}, {
+  "event_id": "54adf2cc-47e8-4b57-bfc3-d32e5abc9e99",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:55:03.085964 UTC",
+  "processed_at": "2026-03-18 10:55:03.091234 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:50:00+00:00"
+}, {
+  "event_id": "31cc20f4-cfb3-4217-a522-f6e148077ea0",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:40:03.056770 UTC",
+  "processed_at": "2026-03-18 10:40:03.062488 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:35:00+00:00"
+}, {
+  "event_id": "cd1a222d-c7c0-46a4-833a-4d13bf4c41d1",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:55:03.887051 UTC",
+  "processed_at": "2026-03-18 11:55:03.894558 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:50:00+00:00"
+}, {
+  "event_id": "c2b6297e-5922-4df2-a0b5-ee0140040263",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:35:03.041263 UTC",
+  "processed_at": "2026-03-18 11:35:03.048444 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:30:00+00:00"
+}, {
+  "event_id": "f259565c-b90b-413f-af99-27fac77975a4",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:45:03.725580 UTC",
+  "processed_at": "2026-03-18 09:45:03.731407 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:40:00+00:00"
+}, {
+  "event_id": "369a82d6-8237-4a70-9fb7-86a2185cd459",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:15:02.846066 UTC",
+  "processed_at": "2026-03-18 13:15:02.852011 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:10:00+00:00"
+}, {
+  "event_id": "9fabcd1b-1f84-4856-9803-0cd28d5ab32b",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:20:03.272322 UTC",
+  "processed_at": "2026-03-18 12:20:03.277897 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:15:00+00:00"
+}, {
+  "event_id": "f4ad080e-f65a-41b6-a323-6fe2a0b417ab",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:40:02.918167 UTC",
+  "processed_at": "2026-03-18 09:40:02.924156 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:35:00+00:00"
+}, {
+  "event_id": "70578807-ab86-4cc1-a74c-1f100094b3ae",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:50:03.051355 UTC",
+  "processed_at": "2026-03-18 13:50:03.056809 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:45:00+00:00"
+}, {
+  "event_id": "7c5d2f0b-a914-41d8-a6c2-b537aef13128",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:20:02.677310 UTC",
+  "processed_at": "2026-03-18 13:20:02.693522 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:15:00+00:00"
+}, {
+  "event_id": "21b1fe64-e279-462a-bb3e-8248191b2fe2",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:25:02.918636 UTC",
+  "processed_at": "2026-03-18 12:25:02.924537 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:20:00+00:00"
+}, {
+  "event_id": "32a533b1-53b0-4ec3-a998-4d0ba7b2cac8",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:10:03.791245 UTC",
+  "processed_at": "2026-03-18 11:10:03.797558 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:05:00+00:00"
+}, {
+  "event_id": "9e71452c-ae7d-4ae6-bcf2-14e14555f576",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:05:02.883155 UTC",
+  "processed_at": "2026-03-18 10:05:02.890667 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:00:00+00:00"
+}, {
+  "event_id": "92ac39d5-edde-49a9-a156-25d0b5eb9b8b",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:01:22.108765 UTC",
+  "processed_at": "2026-03-18 09:01:22.121580 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T08:55:00+00:00"
+}, {
+  "event_id": "8720edd4-77a4-4e52-840d-0edf0d0c00fb",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:15:03.597569 UTC",
+  "processed_at": "2026-03-18 09:15:03.604824 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:10:00+00:00"
+}, {
+  "event_id": "d4ff3af0-b24e-42bd-b5d3-b77d954965c3",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:30:07.986379 UTC",
+  "processed_at": "2026-03-18 12:30:07.991519 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:25:00+00:00"
+}, {
+  "event_id": "a01de9ba-b0be-428b-9064-828046a76940",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:30:08.215008 UTC",
+  "processed_at": "2026-03-18 11:30:08.220742 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:25:00+00:00"
+}, {
+  "event_id": "75177cc8-c3d1-49a2-8e24-ab86c4986a14",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:20:03.567387 UTC",
+  "processed_at": "2026-03-18 10:20:03.573764 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:15:00+00:00"
+}, {
+  "event_id": "b62ef90f-2f31-4489-a176-53b4335cb49d",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:35:03.092850 UTC",
+  "processed_at": "2026-03-18 10:35:03.100713 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:30:00+00:00"
+}, {
+  "event_id": "46b5e19c-a341-4626-b30c-45b8dd97abf3",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:05:03.278194 UTC",
+  "processed_at": "2026-03-18 09:05:03.285672 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:00:00+00:00"
+}, {
+  "event_id": "74a78c75-5718-4696-9e03-b1e830983bd0",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:15:03.925725 UTC",
+  "processed_at": "2026-03-18 11:15:03.931646 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:10:00+00:00"
+}, {
+  "event_id": "ac31e557-e9de-4b0e-886f-e4af4b14467b",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:20:04.261927 UTC",
+  "processed_at": "2026-03-18 11:20:04.267806 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:15:00+00:00"
+}, {
+  "event_id": "4a11d596-4d24-4c01-a0df-8be99eb1a556",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:55:03.006041 UTC",
+  "processed_at": "2026-03-18 13:55:03.013286 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:50:00+00:00"
+}, {
+  "event_id": "12cb6313-1da6-410a-91a5-2ebeb39487c6",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:25:03.791083 UTC",
+  "processed_at": "2026-03-18 13:25:03.797504 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:20:00+00:00"
+}, {
+  "event_id": "f2e9da9b-3c17-4090-a85a-197e4bde4d63",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 14:00:08.724573 UTC",
+  "processed_at": "2026-03-18 14:00:08.732029 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:55:00+00:00"
+}, {
+  "event_id": "c826b4dd-8748-4463-be4f-49a4c1c48407",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:00:07.906169 UTC",
+  "processed_at": "2026-03-18 13:00:07.911003 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:55:00+00:00"
+}, {
+  "event_id": "233627b4-6221-4b87-851f-0786004fdbfd",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:35:03.138375 UTC",
+  "processed_at": "2026-03-18 12:35:03.144367 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:30:00+00:00"
+}, {
+  "event_id": "5ce9850a-e6e5-4376-93ef-05c6e5a44a77",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:30:08.330514 UTC",
+  "processed_at": "2026-03-18 09:30:08.335993 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:25:00+00:00"
+}, {
+  "event_id": "2798a8d3-08bd-4081-9866-df786622e7b9",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:40:02.896106 UTC",
+  "processed_at": "2026-03-18 11:40:02.902176 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:35:00+00:00"
+}, {
+  "event_id": "3f47eb27-b03f-4508-ab7b-6b683508608d",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:50:03.394828 UTC",
+  "processed_at": "2026-03-18 12:50:03.400457 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:45:00+00:00"
+}, {
+  "event_id": "5edee857-fe44-491c-97a8-6723266018f4",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:30:07.922132 UTC",
+  "processed_at": "2026-03-18 10:30:07.928020 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:25:00+00:00"
+}, {
+  "event_id": "23d2d427-a778-492a-9293-d0973c86a67e",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:00:08.333628 UTC",
+  "processed_at": "2026-03-18 12:00:08.347750 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:55:00+00:00"
+}, {
+  "event_id": "e375b702-65d4-420f-8a2f-a00c1271e9a1",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:05:03.826404 UTC",
+  "processed_at": "2026-03-18 11:05:03.832903 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T11:00:00+00:00"
+}, {
+  "event_id": "04bf79fe-a97f-4a10-9854-e3812f310d21",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:05:02.865240 UTC",
+  "processed_at": "2026-03-18 13:05:02.870996 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:00:00+00:00"
+}, {
+  "event_id": "98bf4de8-e473-4075-aa9d-57e4ee69d750",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:45:03.273780 UTC",
+  "processed_at": "2026-03-18 10:45:03.280040 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:40:00+00:00"
+}, {
+  "event_id": "2c387114-e9d8-4552-bf61-12c3cd0e6cfd",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 12:45:03.070594 UTC",
+  "processed_at": "2026-03-18 12:45:03.077398 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T12:40:00+00:00"
+}, {
+  "event_id": "6b1fa3a4-f0e5-4dd5-95e7-030382560cb3",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:35:03.527486 UTC",
+  "processed_at": "2026-03-18 13:35:03.533785 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:30:00+00:00"
+}, {
+  "event_id": "6cfd0d10-fd98-4c38-9dd3-eadc33840bc4",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 11:00:07.638623 UTC",
+  "processed_at": "2026-03-18 11:00:07.644393 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:55:00+00:00"
+}, {
+  "event_id": "7cbb01be-e3f2-4817-aff3-1d4cf5556fd5",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:20:03.296852 UTC",
+  "processed_at": "2026-03-18 09:20:03.303693 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:15:00+00:00"
+}, {
+  "event_id": "c5d9cb21-1005-4b54-9b70-e6477f344dd1",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:10:03.405192 UTC",
+  "processed_at": "2026-03-18 09:10:03.411502 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:05:00+00:00"
+}, {
+  "event_id": "22f46254-a36a-42ac-8da6-df61c56a666c",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:25:02.734818 UTC",
+  "processed_at": "2026-03-18 09:25:02.741205 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:20:00+00:00"
+}, {
+  "event_id": "9fd6e3d0-d97c-458b-8804-d7ca14fc0347",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 13:40:03.404834 UTC",
+  "processed_at": "2026-03-18 13:40:03.410495 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T13:35:00+00:00"
+}, {
+  "event_id": "e9f51a51-b614-448c-8b5c-b2c5bfb73e91",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:15:03.317065 UTC",
+  "processed_at": "2026-03-18 10:15:03.322490 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:10:00+00:00"
+}, {
+  "event_id": "36bed26c-d9a9-4862-a6d3-9a556efdb54b",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:50:03.432332 UTC",
+  "processed_at": "2026-03-18 09:50:03.439189 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:45:00+00:00"
+}, {
+  "event_id": "fc7e8da9-e686-4ca0-a081-753c75dd6bbb",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 09:55:03.030468 UTC",
+  "processed_at": "2026-03-18 09:55:03.036096 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T09:50:00+00:00"
+}, {
+  "event_id": "db901044-b9a1-4d94-bcad-ba2a277c6a68",
+  "metal": "XAU",
+  "price_usd": "5010.7078827454",
+  "api_timestamp": "2026-03-17 23:59:59.000000 UTC",
+  "ingestion_timestamp": "2026-03-18 10:50:03.035460 UTC",
+  "processed_at": "2026-03-18 10:50:03.041271 UTC",
+  "airflow_run_id": "scheduled__2026-03-18T10:45:00+00:00"
+}]
